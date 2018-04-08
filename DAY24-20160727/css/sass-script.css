@@ -1,0 +1,74 @@
+@import url("http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:400");
+.box-triangle {
+  width: 0;
+  height: 0;
+}
+
+body {
+  font: 16px/24px "Lato:400";
+}
+
+#area .name margin {
+  left: auto;
+  right: auto;
+}
+
+#area .name::after {
+  content: 'pseudo interpolation';
+}
+
+@media not screen and (min-width: 21cm) {
+  .name {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
+
+header, main, footer {
+  -webkit-box-sizing: 4px;
+  -moz-box-sizing: 4px;
+  box-sizing: 4px;
+}
+
+header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+main {
+  width: 10px 30px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+footer {
+  height: 90%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 80%;
+  height: 80%;
+}
+
+.box-triangle {
+  border-top: 50px solid transparent;
+  border-right: 100px solid #ff0;
+  border-bottom: 50px solid transparent;
+}
+
+aside {
+  background: red;
+  margin: 10px;
+}
+
+* html #logo {
+  background-image: url(/logo.gif);
+}
+
+/*# sourceMappingURL=../maps/sass-script.css.map */

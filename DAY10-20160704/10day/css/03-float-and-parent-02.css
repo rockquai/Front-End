@@ -1,0 +1,35 @@
+/* 방법1. 부모 요소에게 float 부여
+- 자식에게 float을 주면 부모의 높이가 '0' => 가운데 정렬
+- 부모에게도 float를 주면 부모의 높이가 생기면서 자식을 감싼다. ==> 왼쪽 정렬이 된다.(가운데 정렬이 안된다.)
+- 결론: (부모에게.. 계속 부모에게)무한 float이 된다.
+- float과   margin-left: auto;, margin-right: auto; 적용이 안된다.
+- 잘 쓰지 않는다.
+*/
+
+.wrapper{
+  float: left;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ff0;
+}
+
+.page-nav {
+  float: left;
+}
+
+.page-nav ul {
+  float: left;
+}
+
+.page-nav li {
+  float: left;
+}
+
+.page-nav a {
+  float: left;
+}
+
+.page-nav img{
+  float: left;
+}

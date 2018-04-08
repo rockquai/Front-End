@@ -1,0 +1,380 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "duane",
+        "last": "kolman"
+      },
+      "location": {
+        "street": "7572 hoefijzerstraat",
+        "city": "lisse",
+        "state": "zeeland",
+        "postcode": 25675
+      },
+      "email": "duane.kolman@example.com",
+      "login": {
+        "username": "ticklishfrog661",
+        "password": "norman",
+        "salt": "XvViLLAE",
+        "md5": "78151e4c4736bade2c2ab383c0753d79",
+        "sha1": "a00e7bebfc5c8435d24dd51160c445b858bcb714",
+        "sha256": "83c61907cc5b5732100d0bd54099dd112153f972e4948c55e420ce27daa54fcd"
+      },
+      "dob": "1950-03-10 20:34:00",
+      "registered": "2011-03-22 16:46:59",
+      "phone": "(497)-267-3451",
+      "cell": "(287)-841-6301",
+      "id": {
+        "name": "BSN",
+        "value": "36287711"
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/men\/20.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/men\/20.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/men\/20.jpg"
+      },
+      "nat": "NL"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "jean",
+        "last": "hanson"
+      },
+      "location": {
+        "street": "5767 washington ave",
+        "city": "bowral",
+        "state": "new south wales",
+        "postcode": 9832
+      },
+      "email": "jean.hanson@example.com",
+      "login": {
+        "username": "whitetiger783",
+        "password": "dodgers1",
+        "salt": "OjmTovuM",
+        "md5": "c0d97492aa94187f63760e8361b0d247",
+        "sha1": "1cc8b3ab6476e211d811f556fcd47839323fef14",
+        "sha256": "aa8de06e8749eb6793a26a8d9dc92464174292dc11a645f6e41309bba88a559b"
+      },
+      "dob": "1957-11-22 12:44:31",
+      "registered": "2012-08-28 05:47:56",
+      "phone": "08-2964-6999",
+      "cell": "0438-388-970",
+      "id": {
+        "name": "TFN",
+        "value": "719606461"
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/women\/16.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/women\/16.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/women\/16.jpg"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "efe",
+        "last": "k\u0131l\u0131\u00e7\u00e7\u0131"
+      },
+      "location": {
+        "street": "8295 abanoz sk",
+        "city": "tokat",
+        "state": "ankara",
+        "postcode": 14218
+      },
+      "email": "efe.k\u0131l\u0131\u00e7\u00e7\u0131@example.com",
+      "login": {
+        "username": "whitedog421",
+        "password": "avenue",
+        "salt": "wO95L9kn",
+        "md5": "3f292e70658007c039f0d8f6a1be5872",
+        "sha1": "8572b3d195ccb05b8e66b27549b7069760c94525",
+        "sha256": "fca7c97d34706115643475c7755cca23636ec9c407be19da6fd1be29ad9f5172"
+      },
+      "dob": "1954-12-17 07:44:40",
+      "registered": "2008-06-28 16:15:26",
+      "phone": "(383)-876-2408",
+      "cell": "(731)-043-0622",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/men\/63.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/men\/63.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/men\/63.jpg"
+      },
+      "nat": "TR"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "patricia",
+        "last": "holmes"
+      },
+      "location": {
+        "street": "4691 mill road",
+        "city": "monaghan",
+        "state": "offaly",
+        "postcode": 34521
+      },
+      "email": "patricia.holmes@example.com",
+      "login": {
+        "username": "browntiger224",
+        "password": "woof",
+        "salt": "VwvvOCxP",
+        "md5": "8735c2eac6dcacce67e8e6cbc8d7f689",
+        "sha1": "9e1b07e7dc4cf2870e5cd79a3258b7f545680fd1",
+        "sha256": "cf0392797458d85ec8835294850a2d495d3ee0cd8944f48312f906b21e750db2"
+      },
+      "dob": "1953-08-11 04:02:35",
+      "registered": "2012-02-20 22:29:37",
+      "phone": "051-043-2572",
+      "cell": "081-626-9213",
+      "id": {
+        "name": "PPS",
+        "value": "8363515T"
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/women\/21.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/women\/21.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/women\/21.jpg"
+      },
+      "nat": "IE"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "asta",
+        "last": "mortensen"
+      },
+      "location": {
+        "street": "3378 fasanv\u00e6nget",
+        "city": "ishoej",
+        "state": "danmark",
+        "postcode": 57988
+      },
+      "email": "asta.mortensen@example.com",
+      "login": {
+        "username": "purplebear408",
+        "password": "bristol",
+        "salt": "ZanioN1X",
+        "md5": "e00ba7fc6245c85e84a8578e1dd7b28d",
+        "sha1": "c6f124bf7cdaa4578e308457a6fa3fd2a5207699",
+        "sha256": "9e73e1cb4a595e77fc9cc1bb3f2537afd426f64e82c86a5c79898a424a60653f"
+      },
+      "dob": "1948-01-13 18:13:33",
+      "registered": "2016-06-25 09:00:50",
+      "phone": "88912871",
+      "cell": "65044166",
+      "id": {
+        "name": "CPR",
+        "value": "703944-0657"
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/women\/22.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/women\/22.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/women\/22.jpg"
+      },
+      "nat": "DK"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "gerline",
+        "last": "paffen"
+      },
+      "location": {
+        "street": "7396 muntstraat",
+        "city": "de bilt",
+        "state": "zeeland",
+        "postcode": 57556
+      },
+      "email": "gerline.paffen@example.com",
+      "login": {
+        "username": "ticklishsnake370",
+        "password": "unbelievable",
+        "salt": "jfq8qXKY",
+        "md5": "8e3e56887078abefc4ee7e97fc88de31",
+        "sha1": "318f7e439ee70439de9586c94c96884af4d0d0e2",
+        "sha256": "220984eb2ed63f84db3d274d6cd9991b5f4df15361e3a778ca19dc2652f145f2"
+      },
+      "dob": "1954-01-06 03:28:09",
+      "registered": "2005-04-08 00:24:38",
+      "phone": "(251)-568-0973",
+      "cell": "(536)-554-1447",
+      "id": {
+        "name": "BSN",
+        "value": "30439232"
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/women\/2.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/women\/2.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/women\/2.jpg"
+      },
+      "nat": "NL"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "phillip",
+        "last": "banks"
+      },
+      "location": {
+        "street": "1879 paddock way",
+        "city": "eugene",
+        "state": "pennsylvania",
+        "postcode": 91953
+      },
+      "email": "phillip.banks@example.com",
+      "login": {
+        "username": "greenlion304",
+        "password": "lobster",
+        "salt": "E9UnXaFP",
+        "md5": "418bbf18875a9189eff2caa9582cab0b",
+        "sha1": "70fed446b90fb95512d0c13bc9775d1380648f8d",
+        "sha256": "49165731a4f3eda79174894f2ec87ffc7b7e5c888b10a4e260b61aa855f651c5"
+      },
+      "dob": "1955-11-29 12:04:41",
+      "registered": "2016-04-15 18:03:49",
+      "phone": "(189)-920-7447",
+      "cell": "(397)-951-4162",
+      "id": {
+        "name": "SSN",
+        "value": "516-44-5198"
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/men\/61.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/men\/61.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/men\/61.jpg"
+      },
+      "nat": "US"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "monsieur",
+        "first": "julien",
+        "last": "roche"
+      },
+      "location": {
+        "street": "3573 rue dumenge",
+        "city": "morges 1",
+        "state": "schwyz",
+        "postcode": 1836
+      },
+      "email": "julien.roche@example.com",
+      "login": {
+        "username": "purpleleopard968",
+        "password": "gooner",
+        "salt": "SR1zHxvp",
+        "md5": "d38e9949170ebb2d61b6e2b8fcff16b5",
+        "sha1": "4ef6bc375df62ec09d2c912f0013d4e8f4b94d4a",
+        "sha256": "a8c5a28b99df6f04f51834d6497d354fb25f1b37c9e8efbf491376c8d38d3242"
+      },
+      "dob": "1987-06-17 15:45:59",
+      "registered": "2006-08-12 12:10:21",
+      "phone": "(596)-316-5481",
+      "cell": "(136)-292-3721",
+      "id": {
+        "name": "AVS",
+        "value": "756.QRSX.UIPX.60"
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/men\/0.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/men\/0.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/men\/0.jpg"
+      },
+      "nat": "CH"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "pit\u00e1goras",
+        "last": "mendes"
+      },
+      "location": {
+        "street": "7146 rua maranh\u00e3o ",
+        "city": "porto seguro",
+        "state": "rond\u00f4nia",
+        "postcode": 51730
+      },
+      "email": "pit\u00e1goras.mendes@example.com",
+      "login": {
+        "username": "whitewolf182",
+        "password": "really",
+        "salt": "VQQ08xV8",
+        "md5": "f73ddbaffc4bb2c0bd49fc28310da998",
+        "sha1": "77913d8af8b09bed5b8df3796ea462763792ab1a",
+        "sha256": "f0736dd6bb3d2a4d04c9bec6bf0860f5c6de1223d770fa1c5c296ab6280c60d1"
+      },
+      "dob": "1993-11-23 15:15:33",
+      "registered": "2014-02-28 04:52:45",
+      "phone": "(12) 0701-3879",
+      "cell": "(28) 1698-1226",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/men\/8.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/men\/8.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/men\/8.jpg"
+      },
+      "nat": "BR"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "miss",
+        "first": "gabrielle",
+        "last": "scott"
+      },
+      "location": {
+        "street": "2614 alfred st",
+        "city": "princeton",
+        "state": "saskatchewan",
+        "postcode": 90623
+      },
+      "email": "gabrielle.scott@example.com",
+      "login": {
+        "username": "organicfrog455",
+        "password": "marie",
+        "salt": "w6VTv7cJ",
+        "md5": "1b680ce0bc361ca802c09d7e74613ec8",
+        "sha1": "5c420489e7615bf0aebb9147a8fa1a87629176f4",
+        "sha256": "2cf51b58b20b6d205fb59133da6cdbe5501cb9b94635da78e483884bbf9a5279"
+      },
+      "dob": "1959-09-30 11:19:15",
+      "registered": "2014-05-25 05:06:43",
+      "phone": "885-231-4587",
+      "cell": "062-197-0683",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https:\/\/randomuser.me\/api\/portraits\/women\/6.jpg",
+        "medium": "https:\/\/randomuser.me\/api\/portraits\/med\/women\/6.jpg",
+        "thumbnail": "https:\/\/randomuser.me\/api\/portraits\/thumb\/women\/6.jpg"
+      },
+      "nat": "CA"
+    }
+  ],
+  "info": {
+    "seed": "cff6bada79575fcc",
+    "results": 10,
+    "page": 1,
+    "version": "1.1"
+  }
+}

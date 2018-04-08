@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app> 
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>AngularJS</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+
+  <!-- 직접 사이트에 받은 파일 -->
+  <!-- <script src="js/angular.min.js"></script> -->
+
+  <!-- CDN -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script> -->
+
+  <!-- bower로 받은 파일 -->
+  <script src="lib/angular/angular.min.js"></script>
+  <script>
+	// [방법1] angular 체크 
+	// window.angular || document.write('<script src="framework/angular.min.js"><\/script>');
+	// console.log('Angular 버전:', window.angular.version.full); // 버전 체크... 객체로 반환하여 이렇게 써야 한다.
+
+	// [방법2] '$' === angular
+	// (function(global, $) {
+	// 	'use strict';
+	// 	$ || document.write('<script src="framework/angular.min.js"><\/script>');
+	// 	console.log('Angular 버전:', $.version.full); 
+	// }(this, this.angular));
+
+	// [방법3] 'ng' === angular
+	(function(global, ng){
+		'use strict';
+		ng || document.write('<script src="framework/angular.min.js"><\/script>');
+		console.log('Angular 버전:', ng.version.full);
+	})(this, this.angular);
+  </script>
+</head>
+<body data-ng-init="application_name='MyApp using AngularJS Framework.'">
+	<!-- 양방향  -->
+	<input type="text" data-ng-model="application_name">
+
+	<!-- Expression -->
+	<h1 lang="en">{{application_name}}</h1>
+	<!-- Directive -->
+	<h2 lang="en" data-ng-bind="application_name"></h2>
+
+	<ul>
+		<li><a href="bower.json">server 요청</a></li>
+		<li><a href="#/home">home</a></li>
+		<li><a href="#/about">about</a></li>
+		<li><a href="#/works">works</a></li>
+	</ul>
+</body>
+</html>

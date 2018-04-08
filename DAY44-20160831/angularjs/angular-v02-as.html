@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Angular 모듈/컨트롤러-v1.2.0.</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+	<h1>[v1.2.0] as 문법 </h1>
+	<div class="ng-template" data-ng-controller="moduleController as mCtrl">
+		<h1 class="ng-template-headline"></h1> <!-- jqLite로 처리  -->
+		<button
+		data-ng-click="mCtrl.setContent()"
+		type="button"
+		class="fire-set-content-btn">fire conetnt below</button>
+		<p>{{ mCtrl.content }}</p> <!-- angular로 처리 -->
+	</div>
+
+<script>
+// ex1. $scope를 사용하지 as 문법
+(function(global, angular, $jq) {
+	'use strict';
+	// 전역에 바로 노출
+	global.moduleController = function() {
+		 var template_headline = $jq('.ng-template-headline');
+		template_headline.addClass('test').text('this is not jQuery. this is jqLite.');
+		var template_headline_content = template_headline.text();
+
+		//$scope 객체의 속성 
+		this.content = ''; // 초기 값 설정
+
+		// $scope 객체의 메소드
+		// $scope.setContent = function() {
+		// 	$scope.content = template_headline_content;
+		// };
+		this.setContent = function() {
+			this.content = template_headline_content;
+		};
+	};
+})(this, this.angular, this.jQuery);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+#aside-container header {
+  padding: 10px;
+  border: none;
+  background: #FF3399;
+}
+
+#articel-container header {
+  height: 100px;
+}
+
+#articel-container header #aside-container header, #aside-container #articel-container header header {
+  padding: 10px;
+  border: none;
+  background: #FF3399;
+}
+
+#aside-container header {
+  height: 100px;
+}
+
+/*# sourceMappingURL=../maps/articel.css.map */

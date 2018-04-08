@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Angular 모듈/컨트롤러 - v1.3.x</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body data-ng-app="ngApp">
+	<h1> [v1.3.x.] angular 컨트롤러 2개 생성 - ngCotroller, demoCtrl </h1>
+	<div class="ng-template" data-ng-controller="ngController">
+		<h1 class="ng-template-headline"></h1>
+		<button
+		data-ng-click="setContent()"
+		type="button"
+		class="fire-set-content-btn">fire conetnt below</button>
+		<p>{{ content }}</p> 
+	</div>
+
+	<!--  as문법을 이용해서 컨트롤러 자신을 참조하는 dc 별칭 사용 -->
+	<div class="demo-temp" data-ng-controller="demoCtrl as dc">
+		<h3>{{dc.headline}}</h3>
+		<!-- <pre>{{ dc | json }}</pre> -->
+	</div>
+	<section class="other-ctrl" data-ng-controller="otherCtrl as oc">
+		<article data-ng-click="oc.trigger()">
+			<!-- <h3 title="{{init_value}}">{{init_value}}</h3> -->
+			<h3 title="{{oc.init_value}}">{{oc.init_value ? '트리거 작동됨..' : '트리거 미작동..'}}</h3>
+		</article>
+	</section>
+
+<script>
+// ex1. 함수 내부에서 this 사용 시 주의점
+(function(global, angular, jq){
+	'use strict';
+	var app = angular.module('ngApp', []);
+
+	// angular 모듈 객체의 cotroller()메소드를 사용하여 컨트롤러 정의
+	app.controller('ngController', function($scope){
+		// 지역 변수 설정
+		var content_text = 'AngularJS Application is Awesome!!';
+
+		// $scope 객체의 속성/메소드 정의
+		$scope.content = '';
+		$scope.setContent = function() {
+			// console.log(this === $scope);
+			this.content = content_text;
+		}
+
+		// jQuery
+		// var ngTHeadline = angular.element('.ng-template-headline'); // - error
+		var ngTHeadline = jq('.ng-template-headline'); // jqeury
+
+		// JS
+		content_text = content_text.split(' ').slice(-1).toString().toLowerCase().replace('!!', '');
+		ngTHeadline.text( content_text ); // button 클릭시 -> awesome
+	});
+
+	// as stntax
+	app.controller('demoCtrl', function() {
+		// 비공개 멤버
+		var headline = 'this App maked Angular';
+		this.headline = headline;
+	});
+
+	// as stntax --- 다시 수정하기!
+	angular.module('ngApp').controller('otherCtrl', function() {
+			// 컨트롤러 참조 변수 
+			var that = this;
+			that.init_value = null;
+			that.trigger = trigger;
+
+			function trigger() {
+				// console.log(that);
+				// that에 참조된 컨트롤러 객체를 사용하기 때문에
+				// 함수를 누가 호출하든 this가 가진 문제점을 해결할 수 있다.
+				if ( jq.type(that.init_value) === 'null' ) {
+					that.init_value = 'otherController';
+				} else {
+					that.init_value = 'not initialization.';
+				}
+			}
+			global.setTimeout(trigger, 3000);
+		});
+})(this, this.angular, this.jQuery);
+</script>
+</body>
+</html>

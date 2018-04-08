@@ -1,0 +1,117 @@
+#iconfinder-goods {
+	width: 1200px;
+	/*background: #f00;*/
+	/*margin: 47px auto 0 auto;*/
+	margin: 0 auto;
+}
+
+.iconfinder-info {
+	margin-top: 45px;
+}
+
+.iconfinder-info-title {
+	font-size: 24px;
+	margin-left: 428px;
+}
+
+.iconfinder-info-description {
+	font-size: 16px;
+	margin: 5px 0 0 288px;
+	color: #454545;
+}
+
+.iconfinder-files {
+	/*margin: -11px 0 0 125px;*/
+	width: 1000px;
+	margin-left: 125px;
+}
+
+.iconfinder-files-list li{
+	float: left;
+	width: 188px;
+	border-radius: 2px;
+	border: 1px solid #e6e6e6;
+	padding-bottom: 15px;
+	margin-left: 50px;
+	margin-top: 31px;
+}
+
+.iconfinder-files-list li:first-child, .iconfinder-files-list li:nth-child(5), .iconfinder-files-list li:nth-child(9) {
+	margin-left: 0;
+}
+
+.iconfinder-files-option {
+	padding: 20px 0 0 2px;
+}
+
+.iconfinder-files-option button{
+	border: 0;
+	background: none;
+	padding: 3px;
+}
+
+.iconfinder-files-option button:hover{
+	border-radius: 2px;
+	background: #239d60;
+	color: #fff;
+}
+
+.iconfinder-files-type-group {
+	width: 52px;
+	border: none;
+}
+
+.icon-images a[href] {
+	display: block;
+	width: 98px;
+	height: 128px;
+	margin: 34px 0 0 79px;
+}
+
+a[href$=".pdf"] {
+	background-image: url("../../images/pdf.png");
+}
+
+a[href$=".doc"] {
+	background-image: url("../../images/doc.png");
+}
+
+a[href$=".xls"] {
+	background-image: url("../../images/xls.png");
+}
+
+a[href$=".txt"] {
+	background-image: url("../../images/txt.png");
+}
+
+a[href$=".png"] {
+	background-image: url("../../images/png.png");
+}
+
+a[href$=".mp3"] {
+	background-image: url("../../images/mp3.png");
+}
+
+a[href$=".psd"] {
+	background-image: url("../../images/psd.png");
+}
+
+a[href$=".html"] {
+	background-image: url("../../images/html.png");
+}
+
+a[href$=".mp4"] {
+	background-image: url("../../images/mp4.png");
+}
+
+a[href$=".gif"] {
+	background-image: url("../../images/gif.png");
+}
+
+a[href$=".mov"] {
+	background-image: url("../../images/mov.png");
+}
+
+a[href$=".avi"] {
+	background-image: url("../../images/avi.png");
+}

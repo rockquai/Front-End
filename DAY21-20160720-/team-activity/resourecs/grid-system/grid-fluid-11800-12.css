@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/**
+ * --------------------------------
+[설계] before grid 
+전체 : 1400px (컨텐츠 영역 - min-width: 1180px)
+컬럼 : 12개
+컬럼 넓이 : 80px
+거터 넓이 : 20px
+ * ----------------------------- */
+
+.grid-container {
+	position: relative;
+	width: 1180px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.grid-container.show-all-grid {
+height: 330vh;
+background: 
+linear-gradient(to bottom, rgba(0, 0, 0, 0) 20px, rgba(127, 108, 254, 0.7) 20px),
+linear-gradient(to right, hsla(356, 72%, 54%, 0.20) 80px, transparent 20px);
+background-size: 1px 21px, 100px 1px;
+}
+
+.grid::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid [class*="unit-"] {
+	float: left;
+	/*margin-right: 20px;*/
+}
+
+.grid .last, .grid .omega { margin-right: 0; }
+.grid .unit-1 { width: 80px; }
+.grid .unit-2 { width: 180px; }
+.grid .unit-3 { width: 280px; }
+.grid .unit-4 { width: 380px; }
+.grid .unit-5 { width: 480px; }
+.grid .unit-6 { width: 580px; }
+.grid .unit-7 { width: 680px; }
+.grid .unit-8 { width: 780px; }
+.grid .unit-9 { width: 880px; }
+.grid .unit-10 { width: 980px; }
+.grid .unit-11 { width: 1080px; }
+.grid .unit-12 { width: 1180px; }
+
+
+/* push / pull */
+.grid [class*="push-"], .grid [class*="pull-"] { position: relative; }
+.grid .push-1 { left: 80px; }
+.grid .push-2 { left: 180px; }
+.grid .push-3 { left: 280px; }
+.grid .push-5 { left: 480px; }
+.grid .push-6 { left: 580px; }
+.grid .push-7 { left: 680px; }
+.grid .push-8 { left: 780px; }
+.grid .push-9 { left: 880px; }
+.grid .push-10 { left: 980px; }
+.grid .push-11 { left: 1080px; }
+.grid .push-12 { left: 1180px; }
+
+.grid .pull-1 { right: 80px; }
+.grid .pull-2 { right: 180px; }
+.grid .pull-3 { right: 280px; }
+.grid .pull-5 { right: 480px; }
+.grid .pull-6 { right: 580px; }
+.grid .pull-7 { right: 680px; }
+.grid .pull-8 { right: 780px; }
+.grid .pull-9 { right: 880px; }
+.grid .pull-10 { right: 980px; }
+.grid .pull-11 { right: 1080px; }
+.grid .pull-12 { right: 1180px; }
+
+.grid .prefix-1 { margin-left: 80px; }
+.grid .prefix-2 { margin-left: 180px; }
+.grid .prefix-3 { margin-left: 280px; }
+.grid .prefix-5 { margin-left: 480px; }
+.grid .prefix-6 { margin-left: 580px; }
+.grid .prefix-7 { margin-left: 680px; }
+.grid .prefix-8 { margin-left: 780px; }
+.grid .prefix-9 { margin-left: 880px; }
+.grid .prefix-10 { margin-left: 980px; }
+.grid .prefix-11 { margin-left: 1080px; }
+.grid .prefix-12 { margin-left: 1180px; }
+
+/**
+ * --------------------------------
+ * media 320
+ * grid
+ * --------------------------------
+ */
+@media (max-width: 320px) {
+	/* baseline */
+	.grid-container {
+		position: relative;
+		width: 320px;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.grid-container.show-all-grid {
+	  height: 800vh;
+	  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20px, rgba(127, 108, 254, 0.7) 20px);
+	  background-size: 1px 21px;
+	}
+
+	/* 320 grid */
+	.grid [class*="unit-"] {
+	  float: left;
+	  margin-right: 0;
+	}
+
+	/* .unit */
+	.wrap .unit-s-full { width: 100%; }
+	.wrap .unit-s-1-2 { width: 50%; }
+	.wrap .unit-s-1-3 { width: 33.3333%; }
+	.wrap .unit-s-2-3, .unit-s-4-6, .unit-s-6-9, .unit-s-8-12 { width: 66.6667%; }
+	.wrap .unit-s-1-4, .unit-s-2-8, .unit-s-3-12 { width: 25%; }
+	.wrap .unit-s-3-4, .unit-s-6-8, .unit-s-9-12 { width: 75%; }
+
+
+	/* 거터 모듈 .gutter */
+	.gutter, .gutter-group [class*="unit-"] { 
+	  padding-left: 1em; padding-right: 1em; 
+	}
+	.grid .no-gutter { padding-left: 0; padding-right: 0; }
+
+
+}/* end */
+
+
+
+
+
+
+
+

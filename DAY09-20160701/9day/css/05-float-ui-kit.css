@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: 1rem; 
+	line-height: 1.5;
+	background: url("../images/guide/leading-21px.png");
+}
+
+.spoqa {
+	font-family: "Spoqa Han Sans";
+}
+
+.color-ui {
+	margin-top: 18px;
+}
+
+.color-ui-title {
+	line-height: 25px;
+	color: #969595;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.color-ui .color-ui-box-type01 {
+	margin-top: 19px;
+}
+
+.color-ui-box-type01 div[class^="box"], .color-ui-box-type02 div[class^="box"] {
+	width: 6.25rem;
+	height: 6.25rem;
+	font-size: 0.875rem;
+}
+
+.color-ui-box-type01 div[class^="box"]>span {
+	display: block;
+	font-size: 0.875rem;
+	color: #fff;
+	text-align: center;
+	padding-top: 2.625rem;
+}
+
+.color-ui-box-type01 li, .color-ui-box-type02 li {
+	float: left;
+	margin-right: 1.75rem;
+}
+
+.color-ui-box-type01 p {
+	font-size: 12px;
+	color: #2c2c2c;
+	letter-spacing: 1.2px;
+	margin-top: 8px;
+	margin-bottom: 18px;
+	text-transform: uppercase;
+}
+
+.color-ui .color-ui-box-type02 {
+	margin-top: 4px;
+}
+
+.box01 {
+	background: #fcb409;
+}
+
+.box02 {
+	background: #63a2fc;
+}
+
+.box03 {
+	background: #44cb83;
+}
+
+.box04 {
+	background: #7171ef;
+}
+
+.box05 {
+	background: #ff5448;
+}
+
+.box06 {
+	background: #787f94;
+}
+
+.box07 {
+	background: #333741;
+}
+
+.box08 {
+	background: #586077;
+}
+
+.box09 {
+	background: #787f94;
+}
+
+.box10 {
+	background: #bac2d0;
+}
+
+.box11 {
+	background: #d9e0e9;
+}
+

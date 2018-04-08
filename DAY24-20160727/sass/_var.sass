@@ -1,0 +1,19 @@
+// 번수
+$base-font-size: 16px
+$base-line-height: $base-font-size * 1.5
+$spoq-language: kr
+$spoq-font-family: "Spoqa Han Sans"
+$lato-font-family: "Lato:400"
+$lato-font-weight: 400
+
+// mixin
+=font
+	font-size: $base-font-size
+	font-family: $spoq-font-family
+	line-height: $base-line-height
+
+// 웹폰트
+// 인터폴레이션 보간법 ==> 문자를 접합(용접과 비슷)
+@import url("http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-#{$spoq-language}.css")
+// @import url("https://fonts.googleapis.com/css?family=#{$lato-font-family}:#{$lato-font-weight}")
+@import url("https://fonts.googleapis.com/css?family=#{$lato-font-family}")

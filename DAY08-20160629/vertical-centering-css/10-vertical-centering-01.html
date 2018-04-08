@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>20160629 - CSS 선택자 - Vertical centering using CSS</title>
+  <link rel="stylesheet" href="css/resourecs/reset.css">
+  <style>
+  /* 
+	div에 line-height: 8em; 부여. 높이(height:8em;)와 
+	똑같이 line-height: 8em을 주면 텍스트의 상/하 공간을 양분하려는 성질을 가진다. 
+   */
+  	div {
+	width:14em;
+	height:8em;
+	margin:0.5em;
+ 	border:thick solid;
+ 	background:#fff;
+ 	line-height: 8em; /* 텍스트가 중앙 정렬 */
+	} 
+
+	.text {
+		border-color:#99f;
+	}
+  </style>
+
+</head>
+<body>
+	<div class="text">
+		<span>Some Text</span>
+	</div>
+</body>
+</html>

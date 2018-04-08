@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>HTML Form 디자인</title>
+</head>
+<body>
+
+  <form name="register_form" action="#" method="GET">
+  <fieldset>
+    <legend>필수 입력</legend>
+    <div>
+      <label for="register-id">id</label>
+      <!-- <input name="id" id="register-id" type="text" value="yamoo9" size="10" maxlength="10"> -->
+      <input name="id" id="register-id" type="text" placeholder="yamoo9" maxlength="10">
+    </div>
+    
+    <div>
+      <label for="register-email">email</label>
+        <input type="email" id="register-email" placeholder="user@email.com">
+    </div>
+    
+    <div>
+      <label for="register-password">password</label>
+      <input name="password" id="register-password" type="password">
+    </div>
+  </fieldset>
+
+    <div>
+      <h3>Gender</h3>
+      <!-- 명시적 label 사용법 -->
+      <!-- <div>
+        <input id="register-male" name="gender-a-type" type="radio"> <label for="register-male">Male</label>
+        <input id="register-female" name="gender-a-type" type="radio"> <label for="register-female">Female</label>
+      </div> -->
+
+      <!-- <hr> -->
+
+      <!-- 암묵적 label 사용법 -->
+      <div>
+        <label> <input checked name="gender" value="1" type="radio"> Male </label>
+        <label> <input name="gender" value="2" type="radio"> Female </label>
+      </div>
+    </div>
+
+    <div>
+      <h3>Hobby</h3>
+      <ul>
+        <li>
+          <label><input type="checkbox" value="book" name="hobby"> Read a Book</label>
+        </li>
+        <li>
+          <label><input type="checkbox" value="sleep" name="hobby"> Sleeping</label>
+        </li>
+        <li>
+          <label><input type="checkbox" value="movie" name="hobby"> Watch a Movie</label>
+        </li>
+      </ul>
+    </div>
+
+	<!-- 운영체제 마다 다르기 때문에 각각 커스텀 해줘야 한다.-->
+    <div>
+	    <label for="register-upload"></label>
+	    <input multiple type="file" id="register-upload" name="register-upload">
+    </div>
+
+	<hr>
+
+    <p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt exercitationem cupiditate numquam adipisci nihil ullam commodi ducimus dignissimos illo quisquam repellendus, sequi voluptas molestiae velit, fugit, quis, reiciendis at accusantium.</p>
+
+    <textarea name="register_message" cols="30" rows="10"></textarea>
+
+    <hr>
+  
+    <div>
+      <h3>Your Job</h3>
+      <select name="register_job">
+        <option value="">당신의 직업을 선택해주세요.</option>
+        <option value="student">student</option>
+        <optgroup label="web">
+          <option value="developer">developer</option>
+          <option value="designer">designer</option>
+          <option value="planner">planner</option>
+        </optgroup>
+        <option value="doctor2" selected>doctor2</option>
+        <option value="etc">etc</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <input type="submit" value="전송">
+    <button type="reset">초기화</button>
+
+    <!-- <button type="submit"><img src="" alt="">전송</button> -->
+  </form>
+
+</body>
+</html>`

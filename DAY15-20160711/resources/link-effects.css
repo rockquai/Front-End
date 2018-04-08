@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* 기본 링크 스타일 */
+a {
+	text-decoration: none;
+	/* 하위 브라우저 고려 */
+	/*padding-bottom: 2px;*/
+	padding-bottom: 0.125rem;
+	/* 하위 브라우저 고려 */
+	/*border-bottom: 1px solid;*/
+	border-bottom: 0.0625rem solid;
+}
+
+/* 
+	- 배경 색상 페이드(Fade In/Out) 
+	- .fade-bg
+	- .fade-bg.round
+*/
+.fade-bg {
+	display: inline-block;
+	/*vertical-align: bottom;*/
+	/* 글자 크기 상대적 표기로 em 단위 사용 */
+	padding: 0.25em 0.375em;
+	transition: all 0.25s;
+	border-bottom: none;
+}
+
+.fade-bg.round {
+	border-radius: 0.1875rem;
+}
+
+.fade-bg:hover,
+.fade-bg:focus {
+	transition: all 0.25s;
+	background: #3498db;
+	color: #fff;
+	border-bottom: none;
+}
+
+.fade-bg:focus {
+	/*outline: none;*/
+}
+
+/**
+ * ---------------------------------
+ * 전 방위 슬라이드(← → ↑ ↓)
+ * .slide-from-left
+ * .slide-from-right
+ * .slide-from-top
+ * .slide-from-bottom
+ */
+
+a[class*="slide-"] {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  padding: 0.06em 0.12em;
+  border-bottom: none;
+  vertical-align: bottom;
+}
+
+a[class*="slide-"]::after {
+  content: attr(data-linktext);
+  position: absolute;
+  width: 100%;
+  background: #1f74bf;
+  color: #fff;
+  transition: all 0.25s;
+  text-align: center;
+}
+
+a.slide-from-left::after {
+  left: -100%;
+}
+
+a.slide-from-left:hover::after,
+a.slide-from-left:focus::after {
+  left: 0;
+}
+
+a.slide-from-right::after {
+  right: -100%;
+}
+
+a.slide-from-right:hover::after,
+a.slide-from-right:focus::after {
+  right: 0;
+}
+
+a.slide-from-top::after {
+  top: -100%;
+  left: 0;
+}
+
+a.slide-from-top:hover::after,
+a.slide-from-top:focus::after {
+  top: 0;
+}
+
+a.slide-from-bottom::after {
+  bottom: -100%;
+  left: 0;
+}
+
+a.slide-from-bottom:hover::after,
+a.slide-from-bottom:focus::after {
+  bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

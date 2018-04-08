@@ -1,0 +1,98 @@
+/* 방법4. 부모 요소에게 float 부여
+  - '방법2' 방법을 의미적으로 사용할 수 있도록 응용한 방법
+
+#### Legacy Method v1 (옛날방식)
+: 가상 요소 내용이 보여줘서 `visibility: hidden;, height: 0;` 부여해서 가상 요소 내용을 없앤다.
+
+.clearfix::after {
+  display: block;
+  content: 'pseudo element';
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+IE 필터링 방식을 추가 :  for IE 6/7
+.lt-ie8 .clearfix {
+  zoom: 1;
+}
+
+/////////////////////////////////////////////
+
+#### Legacy Method v1.1 (옛날방식)
+.new-clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.lt-ie8 .new-clearfix {
+  zoom: 1;
+}
+
+/////////////////////////////////////////////
+
+#### New Method (Micro clearfix 방식(새롭게 등장한  방식))
+: 오페라 브라우저 버그 해결
+
+.mico-clearfix::before,
+.mico-clearfix::after {
+  content: '';
+  display: table;
+}
+.mico-clearfix::after {
+  clear: both;
+}
+
+.lt-ie8 .mico-clearfix {
+  zoom: 1;
+}
+*/
+
+.parent {
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  background: #efefef;
+}
+
+.child {
+  float: left;
+  width: 140px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: hsl(0, 0%, 100%);
+}
+
+.child:first-child  { 
+  background: hsl(20, 20%, 40%); 
+}
+
+.child:nth-child(2) {
+  background: hsl(140, 20%, 40%);
+}
+
+.child:nth-child(3) {
+  font-weight: 900;
+  background: hsl(220, 20%, 40%);
+}
+
+/*
+New Method (Micro clearfix 방식(새롭게 등장한  방식))
+: 오페라 브라우저 버그 해결*/
+.mico-clearfix::before,
+.mico-clearfix::after {
+  content: '';
+  display: table;
+}
+.mico-clearfix::after {
+  clear: both;
+}
+
+/* for ie6/7 */
+.lt-ie8 .mico-clearfix {
+  zoom: 1;
+}
+

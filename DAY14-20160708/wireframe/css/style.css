@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+body {
+	font: 14px/1.5 "Spoqa Han Sans", sans-serif;
+}
+
+h1, h2, h3 {
+	font-size: 14px;
+	color: #fff;
+}
+
+.container {
+	min-width: 1048px;
+}
+
+.brandname-header {
+	margin-bottom: 24px;
+}
+
+.gnb {
+	padding-top: 24px;
+}
+
+.gnb .logo {
+	height: 96px;
+	margin-left: 118px;
+	background: #242424;
+}
+
+.gnb-right-login {
+	margin-left: 40px;
+}
+
+.gnb-right-login li {
+	float: right;
+	margin-right: 20px;
+}
+
+.gnb-right-login li a {
+	width: 108px;
+	height: 34px;
+}
+
+.gnb-right-login li a,
+.gnb-right-menu li a {
+	display: block;
+	background: #242424;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+.gnb-right .gnb-right-menu {
+	margin-top: 14px;
+	margin-left: 28px;
+}
+
+.gnb-right-menu li {
+	float: left;
+	margin-left: 20px;
+}
+
+.gnb-right-menu li a {
+	width: 128px;
+	height: 48px;
+}
+
+/* [1] 메인 쇼케이스 */
+.carousel-main {
+	/*position: relative;*/
+}
+
+.carousel-showcase {
+	height: 456px;
+	background-color: #242424;
+}
+
+.carousel-showcase span {
+	color: #fff;
+}
+
+.carousel-main .carousel-thumb {
+	margin-left: 300px;
+    margin-top: -168px;
+}
+
+/*.carousel-main .carousel-thumb {
+	position: absolute;
+	width: 640px;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}*/
+
+.carousel-main .carousel-thumb li {
+	float: left;
+	margin-right: 20px;
+}
+
+.carousel-main .carousel-thumb li a { 
+	display: block;
+	width: 140px;
+	height: 72px;
+	background: #4c4c4c;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+/*  [2] 주요콘텐츠 캐로셀1 / [4] 주요콘텐츠 캐로셀2 - 공 */
+.brandname-main .carousel-submain {
+	width: 1024px;
+	height: 384px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -72px;
+	margin-bottom: 24px;
+	background: #d7d7d7;
+	z-index: 10;
+}
+
+.carousel-submain .carousel-submain-showcase {
+	padding-top: 48px;
+}
+
+.carousel-submain-showcase li {
+	float: left;
+	margin-left: 20px;
+}
+
+.carousel-submain-showcase li:first-child {
+	margin-left: 10px;
+}
+
+.carousel-submain-showcase li a {
+	display: block;
+	width: 236px;
+	height: 288px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	background: #4c4c4c;
+}
+
+/* [3] youtube */
+.carousel-submain-youtube {
+/*	position: relative;*/
+	height: 336px;
+	background: #7b7b7b;
+	margin-bottom: 24px;
+}
+
+/*  youtube 버튼 가운데 정렬시 absolute 사용하면 
+	(겹치게 하는 디자인을 할 경우) 아래 형제 요소가 그 위로 올라오지 못한다.*/
+/*.buttonset-contorl {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}*/
+
+.buttonset-contorl {
+	padding-left: 604px;
+	padding-top: 129px;
+}
+
+.buttonset-contorl .button-play {
+	cursor: pointer;
+	width: 111px;
+	height: 78px;
+	border-radius: 20px;
+	background: #cb1e20;
+}
+
+.buttonset-contorl .button-play:before{ 
+    display: block;
+    content: '';
+    border-left: 30px solid #fff;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    margin-left: 44px;
+ }
+
+
+/*  [5] 배너 */
+.banner {
+	height: 144px;
+	background: #ff7d7d;
+	margin-bottom: 24px;
+	color: #fff
+}
+
+/*  [6] 풋터 */
+.brandname-footer {
+	height: 168px;
+	background: #242424;
+	color: #fff;
+}
+
+.company-info {
+	margin-left: 108px;
+	padding-top: 48px;
+}
+
+.company-info .company-map, .company-info .company-sns {
+	height: 64px;
+	background: #4c4c4c;
+}
+
+
+
+
+

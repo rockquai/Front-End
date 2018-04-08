@@ -1,0 +1,25 @@
+/* 목록 초기화 재사용 가능한 스타일 모듈 */
+.reset-list ul, 
+.reset-list ol,
+ul.reset-list,
+ol.reset-list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.cf:after,
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.micro-clearfix:before, .micro-clearfix:after {
+	content: "";
+	display: table;
+}
+.micro-clearfix:after {
+	clear: both;
+}

@@ -1,0 +1,35 @@
+.container, .page-footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 1263px;
+  min-width: 632px;
+}
+
+.page-footer {
+  width: 10px;
+  background: #3d4c31;
+  color: rgba(162, 184, 145, 0.45);
+}
+
+@media sereen and (min-width: 720px) {
+  .page-footer {
+    width: 90%;
+  }
+}
+
+#main {
+  width: 5em;
+}
+
+#sidebar {
+  width: 5em;
+}
+
+.content {
+  width: 6.25rem;
+}
+
+/*# sourceMappingURL=../../maps/script/variables.css.map */

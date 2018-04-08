@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* SCSS 여러 줄 주석 */
+/* 
+SCSS 주석을 
+Sass 주석처럼 사용이
+가능 
+하나? 
+가능하지 않음. ---> CSS Comment 방식으로 써야 함. 
+*/
+html {
+  overflow-y: scroll;
+}
+
+.test-1, .part .test-2, .warp .test-3 {
+  position: absolute;
+}
+
+.button {
+  padding: 50px;
+  border: none;
+  background: #FF0099;
+}
+
+.buldack {
+  width: 200px;
+}
+
+/*# sourceMappingURL=../maps/scss-review.css.map */

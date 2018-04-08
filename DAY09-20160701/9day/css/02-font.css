@@ -1,0 +1,84 @@
+html {
+  font-size: 100%; /* 12.8px */
+}
+
+body {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  /*font-size: 0.875rem;*/ /* 14px */
+  font-size: 1rem; /* 12.8px */
+  /* 행간 설정 */
+  line-height: 1.5rem; /* 19.2px */ /* 1rem * 1.5 = 16 * 1.5 = 24px */
+  /* 배경 이미지 삽입 */
+  background-image: url("../images/guide/leading-21px.png");
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+img {
+  vertical-align: middle;
+}
+
+img + p {
+  margin-top: 1.5rem;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+/**
+ * --------------------------------
+ * font 속기형 작성법
+ * 기본 작성법
+ * font: size/line-height family; [필수]
+ * font: style weight size/line-height family; [선택]
+ * ----------------------------- */
+.font-short-properties {
+ /* font: 1.2rem/2rem Helvetica, Sans-Serif;
+  font: italic 1.2rem/2rem Helvetica, Sans-Serif;
+  font: bold 1.2rem/2rem Helvetica, Sans-Serif;
+  font: bold italic 1.2rem/2rem Helvetica, Sans-Serif;
+  font: italic bold 1.2rem/2rem Helvetica, Sans-Serif;
+  font: italic bold small-caps 1.2rem/2rem Helvetica, Sans-Serif;*/
+}
+
+.spoqa {
+  font-family: "Spoqa Han Sans";
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  word-spacing: 0.05em;
+}
+
+/**
+ * --------------------------------
+ * IR 테크닉 (이미지 대체 기법)
+ * ----------------------------- */
+
+.brand-github, .brand-github a {
+    width: 80px;
+    height: 85px;
+}
+
+.brand-github {
+  overflow: hidden;
+  background-image: url("../images/github.png");
+  background-repeat: no-repeat;
+  text-indent: -9999em;
+}
+
+.brand-github a {
+  display: block;
+}

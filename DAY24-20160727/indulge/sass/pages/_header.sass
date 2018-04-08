@@ -1,0 +1,84 @@
+/* header */
+@import ../base/common
+
+.wrap
+	background: #003652 url("../images/indulge-bg.png") no-repeat;
+	background-position: top center
+	height: 350vh
+
+.indulge-header
+	width: 73.75rem
+	margin: 
+		left: auto
+		right: auto
+
+.header-logo
+	@extend %a11y-hidden
+
+	.indulge-logo
+		width: 178px
+		height: 50px
+		margin-top: 5rem
+		margin-left: auto
+		margin-right: auto 
+		background-position: 0 0
+
+
+.header-gnb 
+	a
+		color: #fff
+
+	&::after
+		@extend %clearfix
+
+	.mobile-button
+		display: none
+
+	.header-menu
+		padding-top: 83px
+
+		&
+			@extend %reset-list
+
+		&::after
+			@extend %clearfix
+		
+		a
+			margin-right: 1.875rem
+			color: #fff
+
+		li
+			float: left
+
+	.header-service
+		float: right
+		padding-top: 83px
+		margin-right: 0
+
+		&::after
+			@extend %clearfix
+
+		.header-search
+			float: left
+			position: relative
+			margin-left: 315px
+
+			.icon-search
+				position: absolute
+				top: 0
+				left: -1.25rem
+				width: 1.1875rem
+				height: 1.1875rem
+				background-position: -11.25rem 0
+
+		.header-checkout
+			@extend .header-search
+			margin-left: 3.9375rem
+
+			.icon-checkout
+				position: absolute
+				top: 0
+				left: -2.25rem
+				width: 1.5rem
+				height: 18px
+				background-position: -12.4375rem 0

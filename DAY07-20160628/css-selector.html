@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>CSS 선택자</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/selectors.css">
+</head>
+<body>
+
+  <div class="container america">
+    <!-- 미국식 영어 -->
+    <p lang="en-US">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi facilis facere, eveniet commodi ratione laudantium a natus dolorem recusandae aspernatur.</p>
+  </div>
+
+  <div class="spain container">
+    <!-- 스페인어 -->
+    <p lang="es">Mujer uno dolor más de, poder mismo si. Soluciones expedición casi paria, marejada asunción velo molesto nihilista mosca placenta conejo.</p>
+  </div>
+
+  <div class="container nation">
+    <!-- 영국식 영어 -->
+    <p lang="en-GB">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi facilis facere, eveniet commodi ratione laudantium a natus dolorem recusandae aspernatur.</p>
+  </div>
+
+  <div class="page" lang="en">
+    <h3>Page Title</h3>
+    <p>Lorem ipsum <a href="http://daum.net/">DAUM</a> sit amet, consectetur adipisicing elit. Omnis, rerum, ab! <a href="#">Possimus</a> rerum autem earum delectus eligendi corrupti atque <a href="http://fastcampus.co.kr/">FASTCAMPUS</a>. Lorem ipsum dolor.</p>
+    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipisicing elit. Omnis, rerum, ab! <a href="#">Possimus</a> rerum autem earum delectus eligendi corrupti atque <a href="http://google.com/">GOOGLE</a>. Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipisicing elit. Omnis, rerum, ab! <a href="#">Possigymus</a> rerum autem earum delectus eligendi corrupti atque <a href="#">vero</a>.</p>
+    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipisicing elit. Omnis, rerum, ab! <a href="#">Possimus</a> rerum autem earum delectus eligendi corrupti atque <a href="#">vero</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, nate</p>
+
+    <p class="howare you">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum necessitatibus aspernatur, magnam tempore, minima dignissimos libero voluptatibus quisquam voluptate nam corporis placeat laudantium quos. Pariatur veniam tenetur ut dolorum molestiae?
+    </p>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <ul class="reset-list rounded-box">
+      <li>
+          <ul>
+            <li>a-1</li>
+            <li>a-2</li>
+            <li>a-3</li>
+          </ul>
+      </li>
+      <li>B</li>
+      <li>C</li>
+    </ul>
+
+    <div class="wrapper">
+    wrapper
+      <div class="inner"></div>
+      <ul class="reset-list">
+       <li>item-1</li>
+       <li>item-2</li>
+       <li>item-3</li>
+       <li>item-4</li>
+       <li>item-5</li>
+       <li>item-6</li>
+       <li>item-7</li>
+       <li>item-8</li>
+     </ul>
+    </div>
+
+
+    <hr>
+
+    <h2 class="dropcap-demo">Magazin Dropcap Design</h2>
+    <p class="dropcap">
+      The Olympic Games could be a "big failure," Rio de Janeiro's acting governor Francisco Dornelles has warned, due to budget shortfalls that threaten to compromise security and mobility during the games
+    </p>
+
+    <p class="dropcap">
+      Hillary Clinton will certainly lean on Elizabeth Warren to help prosecute the case against Donald Trump and, perhaps, guide her agenda through the Senate. But the running-mate role is one Clinton is taking great care to pick, and Warren is not a leading option
+    </p>
+
+    <p class="dropcap">
+      British Prime Minister David Cameron will attend an E.U. summit for the first time since his nation voted to leave the bloc. The summit comes after a rejection by E.U. leaders of informal negotiations and an insistence that the UK follows exit protocol
+    </p>
+
+    <p class="dropcap">
+      Ohio coal company owner Robert E. Murray will host a fundraiser for Republican nominee Donald Trump. More than 1,200 people have said they will attend the invitation-only dinner with Trump in Wheeling, West Virginia
+    </p>
+  </div>
+
+  <hr>
+
+<!--   <div class="msg">
+    <div class="first-child"> hey!!! - first child</div>
+    <p>Lorem ipsum dolor sit amet, <a href="http://map.daum.net/">consectetur </a>adipisicing elit. Eaque autem nemo consequatur, distinctio dolore, veniam perspiciatis, quisquam inventore a repudiandae reprehenderit, reiciendis facere ullam sed neque <abbr title="illo illo illo">illo</abbr> excepturi laboriosam unde.</p>
+    <div class="first-child"> hand up!!- last child</div>
+  </div> -->
+
+
+  <div class="msg">
+    <!-- <div class="before"> hey!!! - first child</div> -->
+    <p>Lorem ipsum dolor sit amet, <a href="http://map.daum.net/">consectetur </a>adipisicing elit. Eaque autem nemo consequatur, distinctio dolore, veniam perspiciatis, quisquam inventore a repudiandae reprehenderit, reiciendis facere ullam sed neque <abbr title="illo illo illo">illo</abbr> excepturi laboriosam unde.</p>
+    <!-- <div class="after"> hand up!! - last child</div> -->
+  </div>
+
+
+  <div class="parent">
+    <div class="child">child 내용</div>
+    <p>fkdfdkfdlfdlfdjlfjdfk</p>
+    <ul>
+      <li><a href="">item-5</a></li>
+      <li><a href="">item-6</a></li>
+      <li><a href="">item-7</a></li>
+    </ul>
+    <ol>
+      <li><a href="">item-8</a></li>
+      <li><a href="">item-9</a></li>
+      <li><a href="">item-10</a></li>
+    </ul>
+  </div>
+</body>
+</html>

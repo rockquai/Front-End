@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* 기본 링크 스타일 */
+a {
+	text-decoration: none;
+	/* 하위 브라우저 고려 */
+	/*padding-bottom: 2px;*/
+	padding-bottom: 0.125rem;
+	/* 하위 브라우저 고려 */
+	/*border-bottom: 1px solid;*/
+	border-bottom: 0.0625rem solid;
+}
+
+/* 
+	- 배경 색상 페이드(Fade In/Out) 
+
+
+*/
+.fade-bg {
+	display: inline-block;
+	vertical-align: bottom;
+	/* 글자 크기 상대적 표기로 em 단위 사용 */
+	padding: 0.25em 0.375em;
+	transition: all 0.25s;
+	border-bottom: none;
+}
+
+.fade-bg.round {
+	border-radius: 0.1875rem;
+}
+
+.fade-bg:hover,
+.fade-bg:focus {
+	transition: all 0.25s;
+	background: #3498db;
+	color: #fff;
+	border-bottom: none;
+}
+
+.fade-bg:focus {
+	/*outline: none;*/
+}
+
+
+
+/* 전 방위 슬라이드(← → ↑ ↓) */
+a[class*="slide-"] {
+	position: relative;
+	/* display: inline-block; 넣는 이유는 overflow: inline-block을 부여하기 위해서... */
+	display: inline-block;
+	overflow: hidden;
+	border-bottom: none;
+	vertical-align: bottom;
+}
+
+a[class*="slide-"]::after {
+	position: absolute;
+	width: 100%;
+	content: attr(data-linktext);
+	background: #1f74bf;
+	color: #fff;
+	transition: all 0.25s;
+	text-align: center;
+}
+
+/* left */
+a.slide-from-left::after {
+	left: -100%;
+}
+
+a.slide-from-left:hover::after, 
+a.slide-from-left:focus::after{
+	left: 0;
+}
+
+/* right  */
+a.slide-from-right::after {
+	right: -100%;
+}
+
+a.slide-from-right:hover::after, 
+a.slide-from-right:focus::after{
+	right: 0;
+}
+
+
+/* top */
+a.slide-from-top::after {
+	display: block;
+	top: -100%;
+}
+
+a.slide-from-top:hover::after, 
+a.slide-from-top:focus::after{
+	top: 0;
+}
+
+/* bottom */
+a.slide-from-bottom::after {
+	display: block;
+	bottom: 0;
+}
+
+a.slide-from-bottom:hover::after, 
+a.slide-from-bottom:focus::after{
+	bottom: -100%;
+}
+
+.fade-underline {
+	border-bottom: 2px solid transparent;
+	/* 장면전환(transition) A -> B, B -> A */
+	/*	transition : 속성, 지속시간, 움직임유형, 지연시간(기본값 0);
+		property (ex, color, background, font-size,.., all), 
+		duration(ex, 100ms, 0.2s),
+		timing-fucntion daly;고
+
+	*/
+
+	/* 언제 */
+	/* 별도의 사용자 인터렉션 없이 처음부터 움직임을 제어하려면 aninmation */
+	/* keyframe 기반으로 애니메이션 */
+	
+	/*  총 5초.  linear : 등속
+	
+	- 처음 느리고 마지막 빠르고 : 
+	- 처음 빠르고 마지막 느리고 : 
+	- 처음 느리고 중간 빠르고 마지막 느리고 : 
+
+	*/
+
+	/* 시작이 0.25초 시작해서 0.25초간 지속 */
+	/*transition: broder-bottom-color 0.25s linear 0.25s; */
+	transition: all 0.25s 
+}
+
+.fade-underline:hover,
+.fade-underline:focus {
+	color: #c90038;
+	border-bottom-color: currentColor;
+}
+
+/*
+	5. 언더라인 슬라이드(← → ↔)
+	.underline-from-left
+	.underline-from-right
+	.underline-from-center
+*/
+
+a[class*="underline-"] {
+	position: relative;
+
+}
+
+a[class*="underline-"]::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	/*width: 100%;*/
+	border-bottom: 2px solid currentColor;
+	transition: all 0.3s;
+}
+
+
+/*  underline-from-left  */
+a.underline-from-left::before {
+	left: 0;
+	right: 100%;
+}
+
+a.underline-from-left:hover::before,
+a.underline-from-left:focus::before {
+	left: 0;
+	right: 0;
+	color: #c90038;
+	border-bottom-color: currentColor;
+}
+
+
+/*  underline-from-right  */
+a.underline-from-right::before {
+	left: 100%;
+	right: 0;
+}
+
+a.underline-from-right:hover::before,
+a.underline-from-right:focus::before {
+	left: 0;
+	right: 0;
+	color: #c90038;
+	border-bottom-color: currentColor;
+}
+
+
+/*  underline-from-center  */
+a.underline-from-center::before {
+	left: 50%;
+	right: 50%;
+}
+
+a.underline-from-center:hover::before,
+a.underline-from-center:focus::before {
+	left: 0;
+	right: 0;
+	color: #c90038;
+	border-bottom-color: currentColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

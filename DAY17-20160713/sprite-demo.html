@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title> 텍스트 양쪽 정렬 text-align-last </title>
+  <link rel="stylesheet" href="resources/webfonts/SpoqaHanSans-kr.css">
+  <link rel="stylesheet" href="resources/common.css">
+  <link rel="stylesheet" href="resources/effects/link-effects-grow.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sprite-anim-penguin {
+      border: 1px solid #999;
+      width: 102px;
+      height: 102px;
+      background: url(images/css-sprite-animation-steps-penguin.png) no-repeat;
+      animation: penguin steps(9) 1s infinite; 
+      margin-bottom: 40px;
+    }
+
+    @keyframes penguin {
+      0% { background-position-x: 0; }
+      100% { background-position-x: -922px; }
+    }
+
+    .sprite-anim-adam {
+      border: 1px solid #999;
+      width: 120px;
+      height: 182px;
+      background: url(images/css-sprite-animation-steps-adam.png) no-repeat;
+      animation: adam steps(7) 1s infinite; 
+      margin-bottom: 40px;
+    }
+
+    @keyframes adam {
+      0% { background-position-x: 0; }
+      100% { background-position-x: -840px; }
+    }
+
+    .sprite-anim-foxtail {
+      border: 1px solid #999;
+      width: 156px;
+      height: 156px;
+      background: #0d92d3 url(images/css-sprite-animation-steps-foxtail.png) no-repeat;
+      animation: foxtail steps(44) 5s infinite; 
+    }
+
+    @keyframes foxtail {
+      0% { background-position-x: 0; }
+      100% { background-position-x: -6864px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="sprite-anim-penguin"></div>
+  <div class="sprite-anim-adam"></div>
+  <div class="sprite-anim-foxtail"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

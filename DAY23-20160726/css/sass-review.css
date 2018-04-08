@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* css comment */
+/*
+	여러 줄
+	라인일 경우
+	출력이 되나?
+ */
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .row::before, .container .row::after {
+  content: '';
+  display: table;
+}
+
+.container .row::after {
+  clear: both;
+}
+
+.lt-ie8 .container .row {
+  zoom: 1;
+}
+
+.col-1, .col-2 {
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.col-1 {
+  width: 75px;
+}
+
+.col-2 {
+  width: 150px;
+}
+
+/*# sourceMappingURL=../maps/sass-review.css.map */

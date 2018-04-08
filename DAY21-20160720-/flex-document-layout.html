@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>CSS3 Flexbox Layout</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="resources/initialization/normalize.css">
+    <link rel="stylesheet" href="resources/common.css">
+	<style>
+    	body { margin: 0; }
+    	header, footer { height: 100px; }
+    	header { background: #ff0; }
+    	footer { background: #feae09; }
+    	main {
+	      display: flex;
+	      border: 10px solid #111;
+	      /*height: 400px;*/
+    	}
+    	section { height: 500px; order: 2; background: #1179fe; flex-grow: 1; flex-basis: 300px;}
+    	aside { flex-shrink: 0; height: 200px;}
+    	.side-A { order: 1; background: #b8b8b8; width: 200px; }
+    	.side-B { align-self: flex-end; order: 3; background: #652cbc; width: 200px; }
+	</style>
+</head>
+<body>
+<!-- 
+	https://www.w3.org/TR/css-flexbox-1/#flex-wrap-property
+ -->
+
+	<header>header</header>
+	<main>
+		<section>section</section>
+		<aside class="side-a">aside A</aside>
+		<aside class="side-b">aside B</aside>
+	</main>
+	<footer>footer</footer>
+
+</body>
+</html>
+

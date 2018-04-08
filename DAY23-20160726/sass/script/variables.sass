@@ -1,0 +1,95 @@
+// Sass 변수는 변수 이름 앞에 $ 기호를 붙인다. 
+// Sass 변수이름 작성 규칙 
+// 변수 이름 사이에 공백을 사용하지 않는다. 
+// 에) $my nickname: 'nickname'
+// 공백 대신에 음절 사이에 _(언더바), -(하이픈)등을 사용하다, 
+// 만약 프로그래밍에 익숙해서 camelCase 방식이 익숙한다면? camelCase 방식 이름을 사욜할 수도 있다. 다만, camelCase 표기식은 일반적으로 함수 이름에 사용되기 때문에 권장하지는 않는다.
+// '_', '-' 같은걸로 인식해서 에러가 안된다. - ex1)
+// 변수의 규칙을 정해라. "_"(언더바)
+
+//ex1.
+// $my-nickname: 'nickname'
+
+// body
+// 	&::before, 
+// 	&::after
+// 		content: $my_nickname
+
+//ex2. 덮여쓰기가 가능 : nickname2로 출력
+// $my-nickname: 'nickname1'
+// $my_nickname: 'nickname2'
+
+// body
+// 	&::before, 
+// 	&::after
+// 		content: $my-nickname //nickname2 출력
+
+
+//ex3.
+$contaner-width: 1263px
+$dark-gray: #3d4c31
+$width: 10px
+$bp-md: 720px
+
+%center-position
+	display: flex
+	justify-content: center
+	align-items: center
+
+%align-center-margin
+	margin:
+		left: auto
+		right: auto
+
+.container
+	@extend %align-center-margin
+	max-width: $contaner-width
+	min-width: ceil($contaner-width / 2)
+
+.page-footer
+	@extend %align-center-margin
+	// width: 100vh - 20vh
+	width: $width
+	@media sereen and (min-width: $bp-md)
+		width: 90%
+	background: $dark-gray
+	color: rgba( lighten($dark-gray, 40%), 0.45 )
+
+#main
+	$width: 5em !global
+	width: $width
+
+#sidebar
+	width: $width
+
+
+
+// 함수 
+@function rem( $px, $base: 16 )
+	$result: (($px / ($px * 0 + 1)) / $base) + rem
+	@return $result
+
+.content
+	width: rem(100px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

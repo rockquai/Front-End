@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>CSS3 Multiple column layout - CSS3 멀티 컬럼 레이아웃 디자인 </title>
+  <link rel="stylesheet" href="resources/webfonts/SpoqaHanSans-kr.css">
+  <link rel="stylesheet" href="resources/initialization/normalize.css">
+  <link rel="stylesheet" href="resources/grid-system/grid-fluid(fiexable).css">
+  <style>
+    .column-container {
+      max-width: 56.25rem; /* 900px */
+      margin: 3rem auto;
+      font-family: "Spoqa Has Sans";
+    }
+
+    .column-container::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    
+    .column {
+/*      box-sizing: border-box;
+      float: left;
+      width: 33.3333%;*/
+      line-height: 1.5rem;
+      padding-right: 1rem;
+    }
+
+    .column:last-child {
+      padding-right: 0;
+    }
+
+    .column p {
+      margin-bottom: 1.5rem;
+    }
+
+
+  .non-mulit-colums {
+    background: #e2e2e2;
+  }
+  
+  .non-mulit-colums{
+    line-height: 1.5rem;
+    color: #6c6045;
+  }
+
+
+  .use-mulit-colums {
+    /* css3 Mulit Colums : div 묶지 않고 작업 */
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    /* 컬럼 사이 간격(gap) */
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    /* 컬럼 사이 간격의 중앙에 배치되는 수직 선 */
+    -webkit-column-rule: 1px solid #67b4ab;
+    -moz-column-rule: 1px solid #67b4ab;
+    column-rule: 1px solid #67b4ab;
+  }
+
+  .use-mulit-colums h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 100;
+    -webkit-column-span: all;
+    -moz-column-span: all;
+    column-span: all;
+  }
+
+  .use-mulit-colums p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    /* 상대적 글자를 써야 하므로 em  */
+    letter-spacing: -0.045em; /* 자간 */
+    word-spacing: 0.15em; /* 어간 */
+  }
+  </style>
+</head>
+<body>
+
+  <div class="column-container non-mulit-colums"> 
+    <!-- <div class="column"> -->
+    <div class="unit-1-3 column">
+      <p>바야흐로 '아재'들의 전성시대다. 지난 상반기 극장가는 황정민, 조진웅, 곽도원, 마동석 등 탄탄한 연기력과 내공을 겸비한 중년 남자 배우들이 스크린을 휩쓸었다. 영화 최대 성수기인 여름에도 아재들의 맹활약이 이어질 전망이다. '터널'(감독 김성훈)의 하정우와 오달수, '부산행'(감독 연상호)의 공유와 마동석, '인천상륙작전'(감독 이재한)의 이정재와 이범수 등 흥행력을 갖춘 아재들의 조합이 더욱 시너지 효과를 낼 것으로 기대된다. 올 여름 극장가에서 주목해 할 만한 아재 콤비 3쌍을 짚어봤다. 하와이 피스톨과 영감이 1년 만에 다시 만났다. 지난해 여름 1200만 관객을 동원한 영화 '암살'(2015)에서 찰떡 호흡을 자랑했던 하정우와 오달수가 다음 달 10일 개봉하는 '터널'을 통해 재회했다. '터널'은 붕괴된 터널에 고립된 한 남자와 그의 구조를 둘러싸고 변해가는 터널 밖의 이야기를 그린 작품. 하정우는 터널에 갇힌 평범한 가장 정수 역을, 오달수는 구조대장 대경 역을 맡았다. 터널의 안과 밖으로 대비되는 두 가지 상황에서 각자 무게중심을 잡으며 특유의 '케미'를 선사할 예정. 하정우는 '터널' 제작보고회에서 "전화통화로 달수 형 목소리만 들어도 캐릭터에 몰입할 수 있었다"며 오달수에 대한 무한한 신뢰를 드러냈다. 오달수는 "터널 밖과 안에서 따로 있으니까 하정우가 너무 보고 싶었다"고 말했다.</p>
+
+      <p>오는 20일 개봉하는 좀비 재난 블록버스터 '부산행'은 충무로 대표 배우 공유와 마동석의 시너지가 기대되는 영화다. '부산행'은 정체불명의 바이러스가 대한민국 전역을 덮은 가운데, 서울역을 출발한 부산행 KTX에 몸을 실은 사람들의 생존을 건 사투를 그린다. 공유는 딸을 구하려는 펀드 매니저 석우를, 마동석은 임신한 아내를 지키려는 상화를 연기했다. 두 사람 모두 소중한 사람을 지키기 위해 좀비에 맞서 싸우며 '아재파탈'의 면모를 유감 없이 발휘할 것으로 보인다. 특히 마동석은 예고편부터 강렬한 인상으로 팬들의 마음을 두근거리게 했다. 마동석은 최근 '부산행' 제작보고회에서 "오래 전부터 형 동생으로 지내는 친구인 공유와 한 번도 작품을 같이 못했는데, 같이 한다고 해서 반가웠다"고 전했다. 평소 두터운 친분을 가진 것으로 알려진 공유와 마동석이 '부산행'에서 어떤 '케미'를 발산할 지 기대를 모은다.</p>
+    </div>
+
+    <!-- <div class="column"> -->
+    <div class="unit-1-3 column">
+      <p>이정재와 이범수는 오는 27일 개봉하는 '인천상륙작전'에서 호흡을 맞췄다. 두 사람은 영화 '태양은 없다'(1999), '오 브라더스'(2003)에 이어 3번째 작품을 함께하게 됐다. '인천상륙작전'은 5000:1의 성공 확률, 한국전쟁의 역사를 바꾼 인천상륙작전의 이야기를 다룬 작품. 상륙작전 전 감행된 특수 첩보 활동인 '엑스 레이'에 투입된 숨은 영웅들을 조명한다. 이정재는 엑스 레이 작전을 이끈 해군 첩보부대 대위 장학수 역을, 이범수는 북한군 인천 방어사령관 림계진 역할을 맡아 카리스마 대결을 예고했다. 전작 '오 브라더스'에서 이복형제로 분해 코미디 연기를 보여줬던 두 사람은 '인천상륙작전'에서 적으로 재회해 팽팽한 대립 구도로 긴장감을 끌어낼 전망이다. 이정재는 "전의 캐릭터와는 많이 다르기 때문에 (이)범수 형이 어떤 무시무시한 연기를 해낼지 기대된다"고 전했다.</p>
+    </div>
+
+    <!-- <div class="column"> -->
+    <div class="unit-1-3 column">
+      <p>Error asperiores veniam laborum ratione sed, architecto sint sapiente omnis vel eius? Magni tenetur deserunt mollitia, officia veniam cupiditate saepe dicta natus, accusantium minus esse distinctio ipsum amet velit possimus sapiente nisi blanditiis! Vitae repellat deleniti quis sapiente nisi neque, fugiat similique magnam esse, facilis distinctio tempora. Aliquid, porro possimus doloribus molestias dolorum culpa laudantium, veritatis sit sequi, inventore voluptates eveniet! Perferendis earum, a aliquid, quod illum quisquam magni dolorum!</p>
+      <p>Incidunt temporibus excepturi optio et voluptatibus soluta id, molestiae dicta in sapiente distinctio delectus ab commodi. Ullam veniam vero iste veritatis optio natus, ut tenetur laudantium accusamus deserunt sit, ducimus assumenda placeat nihil consectetur, maxime ad, iusto cumque unde corrupti nostrum. At ipsam maxime ipsa ullam eum illo ea in officiis et voluptas accusamus error, atque, enim consectetur culpa, rem itaque suscipit pariatur dolorem incidunt reprehenderit dicta cumque fugiat. Rerum.</p>
+    </div>
+  </div>
+
+  <div class="column-container use-mulit-colums"> 
+    <h2>아재 콤비가 뜬다..올 여름 극장가 주목할 케미 '셋'</h2>
+    <p>바야흐로 '아재'들의 전성시대다. 지난 상반기 극장가는 황정민, 조진웅, 곽도원, 마동석 등 탄탄한 연기력과 내공을 겸비한 중년 남자 배우들이 스크린을 휩쓸었다. 영화 최대 성수기인 여름에도 아재들의 맹활약이 이어질 전망이다. '터널'(감독 김성훈)의 하정우와 오달수, '부산행'(감독 연상호)의 공유와 마동석, '인천상륙작전'(감독 이재한)의 이정재와 이범수 등 흥행력을 갖춘 아재들의 조합이 더욱 시너지 효과를 낼 것으로 기대된다. 올 여름 극장가에서 주목해 할 만한 아재 콤비 3쌍을 짚어봤다. 하와이 피스톨과 영감이 1년 만에 다시 만났다. 지난해 여름 1200만 관객을 동원한 영화 '암살'(2015)에서 찰떡 호흡을 자랑했던 하정우와 오달수가 다음 달 10일 개봉하는 '터널'을 통해 재회했다. '터널'은 붕괴된 터널에 고립된 한 남자와 그의 구조를 둘러싸고 변해가는 터널 밖의 이야기를 그린 작품. 하정우는 터널에 갇힌 평범한 가장 정수 역을, 오달수는 구조대장 대경 역을 맡았다. 터널의 안과 밖으로 대비되는 두 가지 상황에서 각자 무게중심을 잡으며 특유의 '케미'를 선사할 예정. 하정우는 '터널' 제작보고회에서 "전화통화로 달수 형 목소리만 들어도 캐릭터에 몰입할 수 있었다"며 오달수에 대한 무한한 신뢰를 드러냈다. 오달수는 "터널 밖과 안에서 따로 있으니까 하정우가 너무 보고 싶었다"고 말했다.</p>
+
+    <p>오는 20일 개봉하는 좀비 재난 블록버스터 '부산행'은 충무로 대표 배우 공유와 마동석의 시너지가 기대되는 영화다. '부산행'은 정체불명의 바이러스가 대한민국 전역을 덮은 가운데, 서울역을 출발한 부산행 KTX에 몸을 실은 사람들의 생존을 건 사투를 그린다. 공유는 딸을 구하려는 펀드 매니저 석우를, 마동석은 임신한 아내를 지키려는 상화를 연기했다. 두 사람 모두 소중한 사람을 지키기 위해 좀비에 맞서 싸우며 '아재파탈'의 면모를 유감 없이 발휘할 것으로 보인다. 특히 마동석은 예고편부터 강렬한 인상으로 팬들의 마음을 두근거리게 했다. 마동석은 최근 '부산행' 제작보고회에서 "오래 전부터 형 동생으로 지내는 친구인 공유와 한 번도 작품을 같이 못했는데, 같이 한다고 해서 반가웠다"고 전했다. 평소 두터운 친분을 가진 것으로 알려진 공유와 마동석이 '부산행'에서 어떤 '케미'를 발산할 지 기대를 모은다.</p>
+
+    <p>이정재와 이범수는 오는 27일 개봉하는 '인천상륙작전'에서 호흡을 맞췄다. 두 사람은 영화 '태양은 없다'(1999), '오 브라더스'(2003)에 이어 3번째 작품을 함께하게 됐다. '인천상륙작전'은 5000:1의 성공 확률, 한국전쟁의 역사를 바꾼 인천상륙작전의 이야기를 다룬 작품. 상륙작전 전 감행된 특수 첩보 활동인 '엑스 레이'에 투입된 숨은 영웅들을 조명한다. 이정재는 엑스 레이 작전을 이끈 해군 첩보부대 대위 장학수 역을, 이범수는 북한군 인천 방어사령관 림계진 역할을 맡아 카리스마 대결을 예고했다. 전작 '오 브라더스'에서 이복형제로 분해 코미디 연기를 보여줬던 두 사람은 '인천상륙작전'에서 적으로 재회해 팽팽한 대립 구도로 긴장감을 끌어낼 전망이다. 이정재는 "전의 캐릭터와는 많이 다르기 때문에 (이)범수 형이 어떤 무시무시한 연기를 해낼지 기대된다"고 전했다.</p>
+
+    <p>Nam perspiciatis autem culpa dolor quae natus sint, modi possimus accusamus et iste fugit cupiditate eius eum laboriosam voluptas sapiente ipsam beatae dolore expedita quo magnam corrupti delectus architecto. Beatae, facere, optio esse omnis expedita harum! Cum ad vitae, voluptatum necessitatibus accusamus in asperiores officia consectetur culpa quo aperiam autem delectus ratione. Earum ipsa reprehenderit tempore distinctio ducimus assumenda hic, facere at voluptatem atque similique ipsum dolorum cupiditate minus sint.</p>
+
+    <p>Error asperiores veniam laborum ratione sed, architecto sint sapiente omnis vel eius? Magni tenetur deserunt mollitia, officia veniam cupiditate saepe dicta natus, accusantium minus esse distinctio ipsum amet velit possimus sapiente nisi blanditiis! Vitae repellat deleniti quis sapiente nisi neque, fugiat similique magnam esse, facilis distinctio tempora. Aliquid, porro possimus doloribus molestias dolorum culpa laudantium, veritatis sit sequi, inventore voluptates eveniet! Perferendis earum, a aliquid, quod illum quisquam magni dolorum!</p>
+
+    <p>Recusandae, fugiat tempore natus accusantium perferendis minus asperiores temporibus minima quisquam dignissimos maiores iste aperiam molestiae autem, cumque itaque culpa labore aliquam, hic. Et corporis unde dolorem sequi iste voluptatem voluptate voluptatum ratione consectetur amet, aspernatur, molestias est excepturi, nihil. Necessitatibus illum, error praesentium. Laboriosam reiciendis mollitia ratione. Aperiam, quos architecto enim sequi sapiente omnis reiciendis accusamus soluta deleniti id, quae nisi ullam dolorum est facilis aspernatur tenetur odio inventore.</p>
+  </div>
+</body>
+</html>

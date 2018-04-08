@@ -1,0 +1,109 @@
+body{
+	margin: 0;
+}
+
+/* clearfix */
+.container,
+.clearfix {
+	*zoom: 1; 
+}
+
+.container:after,
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*
+	페이지 폭: 1200px
+	컬럼 폭: 100px
+	거터 폭: 0px
+	컬럼 개수: 12
+ */
+
+.container{
+	box-sizing: border-box;
+	position: relative;
+	min-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.container.grid:before{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1440px;
+	content: '';
+	z-index: 10000;
+	background-image: linear-gradient(90deg, rgba(236, 0, 60, 0.3) 50%, transparent 50%), linear-gradient(180deg, transparent 90%, rgba(135, 120, 163, 0.4));
+	background-size: 200px 200px, 21px 21px;
+}
+
+[class*="col-"] {float: left;}
+
+.col-1 { width: 100px; }
+.col-2 { width: 200px; }
+.col-3 { width: 300px; }
+.col-4 { width: 400px; }
+.col-5 { width: 500px; }
+.col-6 { width: 600px; }
+.col-7 { width: 700px; }
+.col-8 { width: 800px; }
+.col-9 { width: 900px; }
+.col-10 { width: 1000px; }
+.col-10 { width: 1000px; }
+.col-11 { width: 1100px; }
+.col-12 { width: 1200px; }
+
+[class*="push-"],
+[class*="pull-"] { position: relative; }
+
+.push-1 {left: 100px;}
+.push-2 {left: 200px;}
+.push-3 {left: 300px;}
+.push-4 {left: 400px;}
+.push-5 {left: 500px;}
+.push-6 {left: 600px;}
+.push-7 {left: 700px;}
+.push-8 {left: 800px;}
+.push-9 {left: 900px;}
+.push-10 {left: 1000px;}
+.push-11 {left: 1100px;}
+
+.pull-1 {left: -100px;}
+.pull-2 {left: -200px;}
+.pull-3 {left: -300px;}
+.pull-4 {left: -400px;}
+.pull-5 {left: -5000px;}
+.pull-6 {left: -600px;}
+.pull-7 {left: -700px;}
+.pull-8 {left: -800px;}
+.pull-9 {left: -900px;}
+.pull-10 {left: -1000px;}
+.pull-11 {left: -1100px;}
+
+.prefix-1 {padding-left: 100px;}
+.prefix-2 {padding-left: 200px;}
+.prefix-3 {padding-left: 300px;}
+.prefix-4 {padding-left: 400px;}
+.prefix-5 {padding-left: 500px;}
+.prefix-6 {padding-left: 600px;}
+.prefix-7 {padding-left: 700px;}
+
+.suffix-1 {padding-right: 100px;}
+.suffix-2 {padding-right: 200px;}
+.suffix-3 {padding-right: 300px;}
+.suffix-4 {padding-right: 400px;}
+.suffix-5 {padding-right: 500px;}
+.suffix-6 {padding-right: 600px;}
+.suffix-7 {padding-right: 700px;}
+

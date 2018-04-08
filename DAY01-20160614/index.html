@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- DTD: 문서 유형 정의 -->
+<!-- lang: 언어 설정 -->
+<!-- dir: 문서를 읽는 방향 설정 -->
+<html lang="ko-KR" dir="ltr">
+  <head>
+    <!-- 비표준 IE 호환성 보기 모드 설정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- 언어 인코딩 설정 -->
+    <meta charset="UTF-8">
+    <title>프론트엔드 개발 스쿨 | Front End Develop SCHOOL</title>
+    <!-- 모바일 최적화 환경 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 검색엔진 최적화 SEO -->
+    <!-- description: 200~300자 내외 -->
+    <meta name="description" content="프론트엔드 개발을 위한 HTML 마크업을 다루고 있습니다">
+    <!-- keywords: 10개 내외 -->
+    <meta name="keywords" content="프론트엔드,개발,스쿨,패스트캠퍼스">
+    <meta name="author" content="yamoo9">
+    <!-- 외부 스타일 문서 파일을 호출(링크, 연결) -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+<!-- 
+	1. <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	==> charset="UTF-8" ==> 언어 인코딩 셋팅. (모든 언어)
+	==> http-equiv : 서버의 세팅 값.  (title보다 먼저 있어야 한다.)
+	==> text/html : MIME type. html의 파서 
+
+	- < html dir="rtl" > ==> 오른쪽에서 왼쪽. 
+	- < html dir="ltr" > ==> 왼쪽에서 오른쪽
+	- < html lang="ko-KR" dir="ltr" > ==> 남한
+
+	2. lang
+	: lang 속성은 여러번 사용 가능하다. 스크린 리더기가 해당 lang에 맞게 읽는다. 
+		<p lang="ru"> 해당 언어.... </p>
+	
+	3. doctype (http://www.w3schools.com/tags/tag_doctype.asp)
+	ㄴ HTML 4.01 Strict - 1999년도
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+	==> !DOCTYPE : xml
+	==> DTD : Document Type Definition
+	==> "http://www.w3.org/TR/html4/strict.dtd" : 웹브라우저의 해석. 규칙
+	
+	ㄴ HTML 4.01 Transitional
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+	ㄴ HTML 4.01 Frameset
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+	- doctype 위에 문자열이 있으면 IE에서 오류. (아무것도 존재하지 않아야 한다.)
+
+	4. 비표준 IE 호환성 보기 모드 설정 
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+	 ==> IE 최신 버전으로 렌더링. (사용자가 사용하는 브라우저 버전으로 랜더링.)... 이 코드를 쓰지 않으면 IE7로 랜더링.
+	<meta http-equiv="X-UA-Compatible" content="IE=Emulate7"> 
+	 ==> url 맨끝의 '호환성 보기'(Emulate)를 누르면 IE7로 동작. 
+	<meta http-equiv="X-UA-Compatible" content="IE=9"> 
+	 ==> 해당 버전으로 동작. (IE9) 
+
+	 - meta 요소는 브라우저 또는 검색 로봇에 정보를 전달
+	 - http-equiv : 서버의 셋팅 값. 클라이언트 셋팅 값.  
+	 - "X" : 미지수 X. 비표준을 나타낸다. IE 브라우저 때문에 사용 'X'를 사용한다.
+	 		 'X'를 쓰지 않으면 사용자 브라우저가 IE9, 10, 11을 사용해도 IE7모드로 동작하게 된다.
+
+	 - IE8에는 호환성 보기 버튼(깨진 종이 아이콘 모양, 주소창 맨끝에 위치.)을 만들었다. '호환성 보기' 버튼을 클릭하면 IE8로 랜더링이 되는 것이 아니라 IE6, 7로 하위 브라우저로 랜더링하게 만들어 페이지가 깨져 보지 않게 했다. - 임시 방편. IE8이후 
+
+	 - 유저 웹브라우저(User Agent)
+
+	5. 모바일 최적화 환경 설정 
+	- viewport:  모바일 디바이스 (화면에 보여지는 가시영역 부분이 뷰포트)
+	<meta name="viewport" content="device-width=320px">
+	==> 넓이 320px 고정(절대값)
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	- width=device-width : 내 디바이스의 가로 사이즈 (상대값)
+	- initial-scale = 기본 확대값
+	- maximum-scale = 최대 확대값
+	- minimum-sacle = 최대 축소값
+
+	(모바일의 손가락으로 줌인아웃하는 행동을 핀치인/아웃)
+
+	6. 검색 최적화 엔진 SEO
+	title 이름 
+	현재 페이지 표시 | 전체 페이지 표시
+
+	* 외부 스타일 문서 파일을 호출(링크, 연결)
+	<link rel="stylesheet" href="./css/style.css">
+	rel : 관계 
+	type="text/css" ==> 기본값 html5에선 생략 가능
+	<link rel="stylesheet" href="css/style.css">, <link rel="stylesheet" href="./css/style.css"> 같다.
+
+	ㄴ 상대경로
+	<link rel="stylesheet" href="../css/style.css">
+
+	ㄴ 절대 경로 ==> css아래의 '/'는 루트를 가르킨다. 
+	<link rel="stylesheet" href="/css/style.css"> 
+	==>  서버 구동을 하지 않는 상태에서 보면 url창에 'file:///' 시작되어 에러가 난다.
+
+	ㄴ [CLI] 서버 구동 명령어 
+	 $ http-server -a localhost -p 
+	==> 서버 구동 시키면 'http://' 시작되서 에러가 안난다.
+
+-->
+
+    <!-- 단락 (Paragraph) -->
+    <p>야무 한글 로렘입숨 로렘입숨이란? 디자인을 위한 더미 텍스트!. 쉬지 엮어가는 땀 꽃보다 아름답다 씩씩하게. 숨 죽여도 세상을 찬란한 가슴을 다 들리는 흐르는 꽃보다 사명으로, 아름답다 피어나는 그대 티셔츠 숨소리가 내일의 거추장스런 씩씩하게 쉬지 고동소리 눈부신 청춘아!.</p>
+
+    <p lang="ru">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Страна путь заглавных составитель, имеет мир живет переписали, себя но раз инициал семь сбить свой его запятой всеми снова своих.</p>
+
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>filter - AngularJS</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<style>
+		pre {
+			width: 800px;
+			background: #ececec
+		}
+	</style>
+</head>
+<body data-ng-init="
+order_reverse = true;
+categories=[
+	{
+		'name'        : 'DOM',
+		'description' : '문서객체모델',
+		'has-money'   : 10200,
+		'publish'		  : '2010-08-30',
+		'picture'	  : {
+			'width' : 200,
+			'height' : 200,
+			'src'    : 'http://placehold.it/220x220/3a0099/fff/?text=dom'
+		}
+	},
+	{
+		'name'        : 'Javascript',
+		'description' : '자바스크립트',
+		'has-money'   : 50200,
+		'publish'		  : '2011-08-30',
+		'picture'	  : {
+			'width' : 200,
+			'height' : 200,
+			'src'    : 'http://placehold.it/220x220/3a0099/fff/?text=Javascript'
+		}
+	},
+	{
+		'name'        : 'Node.js',
+		'description' : '서버사이드 자바스크립트 환경',
+		'has-money'   : 30200,
+		'publish'		  : '2012-08-30',
+		'picture'	  : {
+			'width' : 200,
+			'height' : 200,
+			'src'    : 'http://placehold.it/220x220/3a0099/fff/?text=Node'
+		}
+	},
+	{
+		'name'        : 'AngularJS',
+		'description' : '자바스크립트 SPA 프레임워크',
+		'has-money'   : 20200,
+		'publish'		  : '2013-08-30',
+		'picture'	  : {
+			'width'  : 200,
+			'height' : 200,
+			'src'    : 'http://placehold.it/220x220/3a0099/fff/?text=AngularJS'
+		}
+	}
+];
+limit_count = categories.length;
+">
+
+	<!--
+		Directives & Expressions
+			⊙ ng-cloak [FOUC(Flash Of Unstyled Content)](https://en.wikipedia.org/wiki/Flash_of_unstyled_content) : 서버요청이 느려질 때 '{{}}' 보이지 않게 넣는다. 
+			⊙ ng-switch
+			⊙ ng-class
+			⊙ ng-show
+	-->
+
+<h1>Filter &amp; pipe Formatting Data</h1>
+
+<button type="button" data-ng-click="order_reverse = !order_reverse">제목 정렬</button>
+
+<!-- search -->
+<!-- 
+	- data-ng-model="search.name" ==> 객체로 반환
+ -->
+
+<p>
+	<label for="frontend.name">Name: </label>
+	<input id="frontend.name" type="text" data-ng-model="search.name">
+</p>
+
+<p>
+	<label for="frontend.publish">publish: </label>
+	<input id="frontend.publish" type="text" data-ng-model="search.publish">
+</p>
+
+<p>
+	<label for="frontend.limit">Limit: </label>
+	<input id="frontend.limit" type="text" data-ng-model="limit_count">
+</p>
+
+
+<p>
+	<lable>
+		<input type="radio" data-ng-click="order_reverse = false;">오름차순
+	</lable>
+	<lable>
+		<input type="radio" data-ng-click="order_reverse = true;"> 내림차순
+	</lable>
+</p>
+
+
+<pre>{{search | json}}</pre>
+
+<ol class="people-list">
+	<!-- 시작:  frontend.length 개수만큼 반복하여 <li> 템플릿 완성 -->
+	<!-- 'frontend in categories' for in와 동일한 하다. -->
+	<!-- data-ng-repeat: 반복되는 곳에 넣어주면 된다. -->
+	<!-- orderBy, limitTo, filter 필터 -->
+	<li data-ng-repeat="frontend in categories | filter: search | limitTo: limit_count | orderBy: 'name':order_reverse">
+		<div data-ng-bind="frontend.name | lowercase"></div>
+		<div data-ng-bind="frontend.description"></div>
+		<div data-ng-bind="frontend.publish | date:'yyyy년 MM월 dd일'"></div>
+		<!-- currency: Symbol:frectionSize -->
+		<!-- <div data-ng-bind="frontend['has-money'] | currency : 'EURO(€) ':0"></div> -->
+		<div>{{frontend['has-money'] | number:0}}원</div>
+		<!-- 
+			* ngSrc
+			- src="{{frontend.picture.src}}" 
+			ㄴ> 데이터가 불려올 때 src 경로가 없어서(파일이 없어) net::ERR_FILE_NOT_FOUND 에러가 난다 
+			ㄴ> data-ng-src를 붙여줘서 게으른 로딩(Lazy Loading)을 사용한다. 
+		 -->
+		<div>
+			<img 
+				data-ng-src="{{frontend.picture.src}}" 
+				alt="{{frontend.name}}"
+				width="{{frontend.picture.width}}"
+				height="{{frontend.picture.height}}"
+			>
+		</div>
+	</li>
+	<!-- 종료: frontend.length 개수만큼 반복하여 <li> 템플릿 완성 -->
+</ol>
+
+<pre>
+<code>
+<!-- json filter -->
+{{ categories | json }}
+<!-- {{ categories.length }} -->
+</code>
+</pre>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

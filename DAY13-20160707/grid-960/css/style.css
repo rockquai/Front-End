@@ -1,0 +1,114 @@
+body {
+	font: 14px/1.5 "Spoqa Han Sans", sans-serif;
+}
+h1, h2, h3 {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.wrapper {
+	width: 940px;
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* header */
+.header {
+	height: 143px;
+	background: #06b2f5;
+}
+
+.header::before {
+	display: block;
+	content: '';
+	width: 940px;
+	height: 24px;
+	background: #0493d7;
+}
+
+.header .logo {
+	float: left;
+	height: 48px;
+	width: 220px;
+	margin-top: 36px;
+	background: #18ffff;
+	text-align: center;
+}
+
+.header .gnb li {
+	float: right;
+	margin-top: 48px;
+}
+
+.header .gnb li a {
+	display: block;
+	width: 94px;
+	height: 24px;
+	background: #026289;
+	margin-left: 30px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* banner */
+.banner {
+	position: relative;
+	margin-top: 24px;
+}
+
+.banner .video {
+	height: 254px;
+	background: #99f2ff;
+}
+
+.banner .button-play {
+	position: absolute;
+	top: 96px;
+	left: 435px;
+	width: 72px;
+	height: 72px;
+	background: url("../images/button-icon-play.png") no-repeat;
+}
+
+
+/* contents */
+.contents {
+	margin-top: 24px;
+}
+
+.contents .main {
+	float: left;
+	width: 620px;
+	height: 816px;
+	background: #d1f9ff;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.contents .aside {
+	float: left;
+	width: 300px;
+	height: 360px;
+	background: #a9e8f1;
+	text-align: center;
+}
+
+/* footer */
+.footer {
+	margin-top: 24px;
+	height: 97px;
+	background: #667e87;
+	text-align: center;
+}
+
+.footer .company-info {
+	margin-top: 36px;
+	width: 620px;
+	height: 25px;
+	background: #9fafb5;
+	margin-left: 160px;
+	text-align: center;
+}
+

@@ -1,0 +1,131 @@
+body {
+  background: #ccc;
+  font-family: 'Spoqa Han Sans';
+}
+
+
+.momentum{
+  position: relative;
+  height: 100vh;
+  background: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+[class^="momentum-"] {
+  position: absolute;
+}
+
+.momentum-links {
+  top: 20px;
+  left: 20px;
+  color: #fff;
+}
+
+.links-title, .links-search{
+  float: left;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.links-search {
+  width: 16px;
+  height: 16px;
+  background: url("../images/sprite-icon-sprocket.svg") no-repeat;
+  background-size: 16px;
+}
+
+.momentum-weather {
+  top: 20px;
+  right: 45px;
+}
+
+.weather-cloud {
+  width: 16px;
+  height: 16px;
+  background: url("../images/sprite-icon-cloud.svg") no-repeat;
+  background-size: 16px;
+}
+
+.momentum-weather a {
+  display: block;
+  color: #fff;
+}
+
+.weather-cloud, .weather-state {
+  float: left;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.weather-temperature {
+  font-size: 16px;
+}
+
+.weather-city {
+  font-size: 12px;
+}
+
+
+.momentum-nature {
+  bottom: 20px;
+  left: 20px;  
+}
+
+.nature-go {
+  float: left;
+} 
+
+.nature-title {
+  float: right;
+  color: #fff;
+}
+
+
+.momentum-todo {
+  bottom: 20px;
+  right: 20px;  
+}
+
+.momentum-todo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.date {
+  position: absolute; 
+  width: 500px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.time {
+  font-size: 100px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.state .greeting {
+  font-size: 30px;
+  margin-bottom: 45px;
+}
+
+.today {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.today::after {
+    display: block;
+    content: '';
+    width: 400px;
+    margin-top: 40px;
+    margin-left: 50px;
+    border-bottom: 2px solid #fff;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>jQuery Plugin radioClass</title> 
+  <style>
+    .on {
+      font-weight: 900;
+      background: #ff0;
+    }
+  </style>
+  <!-- jQuery 라이브러리 로드 -->
+  <script src="resources/jquery/jquery-3.1.0.min.js"></script>
+  <!-- 커스텀 jQuery 플러그인 radioClass 로드 -->
+  <script src="plugins/radioClass/jquery.radioClass.js"></script>
+  <script src="plugins/memory/jquery.memory.js"></script>
+</head>
+<body>
+	<!-- nav.test>ul>li*4>a{test suite $@1} -->
+	<nav class="test">
+		<ul>
+			<li><a href="#">test suite 1</a></li>
+			<li><a href="#">test suite 2</a></li>
+			<li><a href="#">test suite 3</a></li>
+			<li><a href="#">test suite 4</a></li>
+		</ul>
+	</nav>
+<script>
+(function(global, $){
+	'use strict';
+	// console.log($.fn.radioclass); //undefined
+	var $test = $('.test');
+	// 이벤트 위암을 통해서 ('a' 이벤트 위임) 
+	$test.on('click', 'a', function(ev) {
+		// 브라우저 기본 동작 차단
+		ev.preventDefault();
+		// console.log('ev.target:', ev.target); // a
+		// console.log('this:', this); // a
+		// var href = $(this).attr('href'); 
+
+		console.log( '객체 생성 전:', $.data(this, '$this') ); // undefined
+		// $.memory 사용
+		// var href = $.memory(this).attr('href');
+		// $.$ = $.memory;용 ==> $.$ 별칭 사용
+		var href = $.$(this).attr('href');
+		console.log( '객체 생성 후:', $.data(this, '$this') ); 
+		console.log(href);
+	});
+	
+	// $test.on('click', 'a', function(ev) {
+	// 	// 브라우저 기본 동작 차단
+	// 	ev.preventDefault();
+	// 	// console.log('ev.target:', ev.target);
+	// 	// console.log('this:', this);
+	// 	var $this = $(ev.target);
+	// 	var $parent = $this.parent();
+	// 	$parent.radioClass('selected');
+	// });
+ })(this, this.jQuery);
+</script>
+</body>
+</html>
+
+
+
+
+
+

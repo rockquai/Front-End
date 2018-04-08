@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title> javascript  - DOM </title>
+</head>
+<body>
+	<p class="my-pa">
+		<strong>hello</strong> how are you doing?
+	</p>
+<script>
+var first_para = document.getElementsByTagName('p').item(0);
+// var first_para = document.getElementsByTagName('p')[0];
+var first_para_nodes = first_para.childNodes;
+
+console.log(first_para_nodes[0].nodeType); //3
+console.log(first_para_nodes[1].nodeType); //1
+console.log(first_para_nodes[2].nodeType); //3
+
+console.log(first_para_nodes[0].nodeType === document.ELEMENT_NODE); // false
+console.log(first_para_nodes[1].nodeType === document.ELEMENT_NODE); // true
+console.log(first_para_nodes[2].nodeType === document.TEXT_NODE); // true
+
+// Node.ELEMENT_NODE: 1, Node.TEXT_NODE: 3, Node.ATTRIBUTE_NODE: 2
+// Node.COMMENT_NODE: 8, Node.DOCUMENT_NODE: 9
+</script>
+</body>
+</html>

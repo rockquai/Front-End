@@ -1,0 +1,92 @@
+//의존 function 모듈
+@import "function/percent"
+
+// 목록 초기화
+%reset-list-group ul,
+%reset-list-group ol,
+%reset-list {
+	margin-top:    0;
+	margin-bottom: 0;
+	padding-left:  0;
+	list-style:    none;
+}
+
+// 이미지 공백 제거
+%rm-img-blank {
+  vertical-align: bottom;
+}
+
+// 이미지 하단에 공백을 형성하여 옆으로 배치되는 글들이 동일한 공간을 가질 수 있도록 설정
+%blank-bottom-img {
+  overflow: hidden;
+}
+
+// media
+// 배경 이미지(CSS)에 적용되는 Fluid BG Image
+// 스크린 비율(가로x세로)
+// 4:3  = 75%
+// 16:9 = 56.25%
+// 21:9 = 42.857142857%
+
+%rwd-media {
+  width: 100%;
+  height: auto;
+}
+
+%_rwd-media-ratio {
+	width: 100%;
+	height: 0;
+	background-size: cover;
+	background-position: center center;
+}
+
+%rwd-img-4-3 {
+	@extend %_rwd-media-ratio
+	// padding-bottom: 3/4*100%;
+	padding-bottom: percent(3, 4);
+}
+
+%rwd-img-16-9 {
+	@extend %_rwd-media-ratio
+	// padding-bottom: 9/16*100%;
+	padding-bottom: percent(9, 6);
+}
+
+%rwd-img-21-9 {
+	@extend %_rwd-media-ratio
+	// padding-bottom: 9/12*100%;
+	padding-bottom: percent(9, 21);
+}
+
+// 클리어 픽스 
+%clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+%lt-ie8 {
+	@extend %clearfix
+	zoom: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/****
+
+[설계] 고정 그리드 
+전체     : 1280px (min-width: 1200px)
+컬럼     : 10개
+컬럼 넓이 : 108px
+거터 넓이 : 10px 
+
+****/
+
+/* Grid */
+body.overlay-gird::after {
+  position: absolute;
+  top: 0;
+  left: 50%; 
+  transform: translate(-50%);
+  content: '';
+  min-height: 100vh;
+  z-inde: 10000;
+}
+
+body.overlay-gird::after,
+.container {
+  width: 1280px;
+  height: 300vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.overlay-gird::after,
+.container.show-grid,
+.container.hover-hide-grid {
+  background: url("../resourecs/grid-system/images/grid-patten-10-108-10.png") repeat;
+}
+
+/*.container.hover-hide-grid:hover {
+  background: none;
+}*/
+
+/* clearfix 유사 */
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/*  Grid Col */
+[class*="col-"] {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.col-1  { width: 108px; }
+.col-2  { width: 236px; }
+.col-3  { width: 364px; }
+.col-4  { width: 492px; }
+.col-5  { width: 620px; } 
+.col-6  { width: 748px; }
+.col-7  { width: 876px; }
+.col-8  { width: 1004px; }
+.col-9  { width: 1132px; }
+.col-10 { width: 1260px; }
+
+[class*="push-"],
+[class*="pull-"] { 
+  position: relative; 
+}
+
+.push-1  { width: 108px; }
+.push-2  { width: 236px; }
+.push-3  { width: 364px; }
+.push-4  { width: 492px; }
+.push-5  { width: 620px; } 
+.push-6  { width: 748px; }
+.push-7  { width: 876px; }
+.push-8  { width: 1004px; }
+.push-9  { width: 1132px; }
+.push-10 { width: 1260px; }
+
+.pull-1  { width: -108px; }
+.pull-2  { width: -236px; }
+.pull-3  { width: -364px; }
+.pull-4  { width: -492px; }
+.pull-5  { width: -620px; } 
+.pull-6  { width: -748px; }
+.pull-7  { width: -876px; }
+.pull-8  { width: -1004px; }
+.pull-9  { width: -1132px; }
+.pull-10 { width: -1260px; }  
+
+.prefix-1  { padding-left: 108px; }
+.prefix-2  { padding-left: 236px; }
+.prefix-3  { padding-left: 364px; }
+.prefix-4  { padding-left: 492px; }
+.prefix-5  { padding-left: 620px; } 
+.prefix-6  { padding-left: 748px; }
+.prefix-7  { padding-left: 876px; }
+.prefix-8  { padding-left: 1004px; }
+.prefix-9  { padding-left: 1132px; }
+.prefix-10 { padding-left: 1260px; }
+
+.suffix-1  { padding-right: 108px; }
+.suffix-2  { padding-right: 236px; }
+.suffix-3  { padding-right: 364px; }
+.suffix-4  { padding-right: 492px; }
+.suffix-5  { padding-right: 620px; } 
+.suffix-6  { padding-right: 748px; }
+.suffix-7  { padding-right: 876px; }
+.suffix-8  { padding-right: 1004px; }
+.suffix-9  { padding-right: 1132px; }
+.suffix-10 { padding-right: 1260px; }
+
+
+
+/* test */
+/*.temp {
+    background: #000;
+    color: #fff;
+    height: 24px;
+}
+
+.mt { margin-top: 24px; }
+*/
+
+
+
+
+
+
+
+
+
+
+
+

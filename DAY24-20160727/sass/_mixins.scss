@@ -1,0 +1,83 @@
+//믹스인(Mixin) : 코드를 섞다
+
+// 믹스인 정의 
+// @mixin 믹스인명 ($매개변수) { }
+
+// 정적 믹스인
+// @mixin box-sizing {
+// 	-webkit-box-sizing: border-box;
+// 	-moz-box-sizing: border-box;
+// 	box-sizing: border-box;
+// }
+
+// 동적 믹스인(매개변수)
+// @mixin box-sizing($type) {
+// 	-webkit-box-sizing: $type;
+// 	-moz-box-sizing: $type;
+// 	box-sizing: $type;
+// }
+
+// 동적 믹스인(매개변수) - 기본값을 넣는 경우 
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+}
+
+// 동적 믹스인(매개변수) - 기본값을 null. 
+@mixin size($width: null, $height: null) {
+	width: $width;
+	height: $height;
+}
+
+
+// 매개변수값을 하나만 넣으면 width, height가 동시에 들어간다.
+@mixin size-same($width) {
+	width: $width;
+	height: $width;
+}
+
+// CSS Shape 
+%shape-wh {
+	width: 0;
+	height: 0;
+}
+
+@mixin triangle-up($left, $right, $bottom, $color){
+	@extend %shape-wh;
+	border-left: $top solid transparent;
+	border-right: $right solid $color;
+	border-bottom: $bottom solid transparent;
+}
+
+@mixin triangle-bottom($left, $right, $bottom, $color){
+	@extend %shape-wh;
+	border-left: $top solid transparent;
+	border-right: $left solid $color;
+	border-top: $bottom solid transparent;
+}
+
+@mixin triangle-left($top, $right, $bottom, $color){
+	@extend %shape-wh;
+	border-top: $top solid transparent;
+	border-right: $right solid $color;
+	border-bottom: $bottom solid transparent;
+}
+
+@mixin triangle-right($top, $left, $bottom, $color){
+	@extend %shape-wh;
+	border-top: $top solid transparent;
+	border-left: $left solid $color;
+	border-bottom: $bottom solid transparent;
+}
+
+
+
+
+
+
+
+
+
+
+

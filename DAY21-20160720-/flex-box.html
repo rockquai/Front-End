@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>CSS3 Flexbox Layout</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="resources/initialization/normalize.css">
+    <link rel="stylesheet" href="resources/common.css">
+  <style>
+	  body {
+	  	margin: 2rem;
+	  }
+
+	 .center-x-y {
+	 	display: flex;
+	 	justify-content: center;
+	 	align-items: center;
+	 }
+
+ 	.flex-container {
+ 		display: flex; /* = block 요소처럼 */
+ 		justify-content: center; /* = flex-start 기본값 */
+ 		/*  align-items: stretch ==> stretch 기본값, 아이템에 height값이 있으면 적용이 안된다. */
+ 		/*align-items: stretch;*/
+ 		/*display: inline-flex;*/ /* = inline 요소 처럼 컨텐츠 부모만큼 준다.*/
+ 		/*flex-direction: row;*/ /* row 기본값 */
+ 		/*flex-direction: row-reverse; */
+ 		/*flex-direction: column;*/
+ 		/*flex-direction: column-reverse;*/
+ 		/*flex-wrap: nowrap;*/ /* nowrap 기본값 */
+ 		/*flex-wrap: wrap;*/
+ 		/*flex-wrap: wrap-reverse;*/
+ 		/*flext-flow: row nowrap;*/
+		margin: 2rem 0;
+		border: 2px solid #333;
+		padding: 0.625rem;
+		height: 400px;
+ 	}
+
+ 	.flex-item {
+ 		width: 100px;
+ 		background: #333;
+ 		color: #fff;
+ 	}
+
+ 	.item-1 { /*height: 50px;*/ background: #f0a518; }
+ 	.item-2 { /*height: 120px;*/ background: #795da3; }
+ 	.item-3 { /*height: 80px;*/ background: #b23e3e; }
+ 	.item-4 { /*height: 40px;*/ background: #2186b5; }
+
+  </style>
+</head>
+<body>
+
+	<img src="http://placehold.it/200x200/fe4940/111/?text=1" alt="">
+
+  <div class="flex-container">
+      <div class="flex-item item-1 center-x-y">flexbox 1</div>
+      <div class="flex-item item-2 center-x-y">flexbox 2</div>
+      <div class="flex-item item-3 center-x-y">flexbox 3</div>
+  </div>
+
+	<img src="http://placehold.it/200x200/fe4940/111/?text=2" alt="">
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quidem ducimus ratione quia obcaecati deserunt, magni eveniet quaerat. Sint deserunt neque quas, nisi similique provident, a optio iste magni quo!</p>
+
+</body>
+</html>
+

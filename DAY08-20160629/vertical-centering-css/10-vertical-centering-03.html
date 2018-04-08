@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>20160629 - CSS 선택자 - Vertical centering using CSS</title>
+  <link rel="stylesheet" href="css/resourecs/reset.css">
+  <style>
+	/* 
+	 Using display:table-cell
+	*/
+	.block {
+		display:table-cell;
+		width:14em;
+		height:8em;
+		margin:0.5em;
+		border:thick solid;
+		background:#f00;
+		color:#ff4;
+		vertical-align:middle;
+	} 
+	.block div {
+		width:10em;
+		border:dashed;
+		line-height: 8em; 
+	}
+  </style>
+
+</head>
+<body>
+	<div class="block">
+		<div> Block element, with long enough content to wrap.
+		</div>
+	</div>
+</body>
+</html>

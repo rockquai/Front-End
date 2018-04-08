@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Angular 모듈/컨트롤러</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="ng-template" data-ng-controller="moduleController">
+		<h1 class="ng-template-headline"></h1> <!-- jqLite로 처리  -->
+		<button
+		data-ng-click="this.setContent()"
+		type="button"
+		class="fire-set-content-btn">fire conetnt below</button>
+		<p>{{ this.content }}</p> <!-- angular로 처리 -->
+	</div>
+
+<script>
+// ex1.
+// (function(global, angular) {
+// 	'use strict';
+// 	// 전역에 바로 노출
+// 	global.moduleController = function($scope) {
+// 		// $scope 객체 (중재자 역할, view - controller 사이의 접착제)
+// 		console.log('angular.version:', angular.version.full);
+// 		console.log('this:', this); // moduleController()
+// 		console.log('$scope:', $scope);
+
+// 		// [ver 1.2.x, IE8 호환] 
+// 		// jquery와 유사한 jqLite를 Angular 컨트롤러 내부에서 사용하는 예.
+// 		// jqLite 기능이 미약하다. 상위버전에서 jquery 컨포넌트를 쓰게 되면 jqLite로 대체하게 된다.
+// 		console.log('angular.element:', angular.element);
+// 		var template_headline = document.querySelector('.ng-template-headline');
+// 		template_headline = angular.element(template_headline);
+// 		console.log( template_headline );
+
+// 		// 일부만 지원되기 때문에 레퍼런스 참고
+// 		template_headline.addClass('test').text('this is test');
+// 	}
+// })(this, this.angular);
+
+// ex2.
+// (function(global, angular) {
+// 	'use strict';
+// 	// 전역에 바로 노출
+// 	global.moduleController = function($scope) {
+// 		// $scope 객체 (중재자 역할, view - controller 사이의 접착제)
+// 		// console.log('angular.version:', angular.version.full);
+// 		// console.log('this:', this); // moduleController()
+// 		// console.log('$scope:', $scope);
+
+// 		// [ver 1.2.x, IE8 호환] 
+// 		// jquery와 유사한 jqLite를 Angular 컨트롤러 내부에서 사용하는 예.
+// 		// jqLite 기능이 미약하다. 상위버전에서 jquery 컨포넌트를 쓰게 되면 jqLite로 대체하게 된다.
+// 		// console.log('angular.element:', angular.element);
+// 		var template_headline = document.querySelector('.ng-template-headline');
+// 		template_headline = angular.element(template_headline); // angular에서 만든 jqLite
+// 		// console.log( template_headline );
+
+// 		// 일부만 지원되기 때문에 레퍼런스 참고
+// 		template_headline.addClass('test').text('this is not jQuery. this is jqLite.');
+// 		var template_headline_content = template_headline.text();
+
+// 		//$scope 객체의 속성
+// 		$scope.content = template_headline_content; 
+
+// 		// console.log($);
+// 		// console.log(angular.element);
+// 	};
+// })(this, this.angular);
+
+//ex3. jQuery 같이 쓸 경우 
+(function(global, angular, $jq) {
+	'use strict';
+	// 전역에 바로 노출
+	global.moduleController = function($scope) {
+		// $scope 객체 (중재자 역할, view - controller 사이의 접착제)
+		// console.log('angular.version:', angular.version.full);
+		// console.log('this:', this); // moduleController()
+		// console.log('$scope:', $scope);
+
+		// [ver 1.2.x, IE8 호환] 
+		// jquery와 유사한 jqLite를 Angular 컨트롤러 내부에서 사용하는 예.
+		// jqLite 기능이 미약하다. 상위버전에서 jquery 컨포넌트를 쓰게 되면 jqLite로 대체하게 된다.
+		// console.log('angular.element:', angular.element);
+		
+		/**
+		 * ------------------------------------------------------------------------------------
+		 * var template_headline = document.querySelector('.ng-template-headline');
+		 * template_headline = angular.element(template_headline); 
+		 * jQuery를 사용하면 위에 코드 대신 아래 코드로 쓸 수 있다. 
+		 * ------------------------------------------------------------------------------------
+		 */
+		
+		 var template_headline = $jq('.ng-template-headline');
+		template_headline.addClass('test').text('this is not jQuery. this is jqLite.');
+		var template_headline_content = template_headline.text();
+
+		//$scope 객체의 속성 
+		$scope.content = ''; // 초기 값 설정
+
+		// $scope 객체의 메소드
+		$scope.setContent = function() {
+			$scope.content = template_headline_content;
+		};
+	};
+})(this, this.angular, this.jQuery);
+</script>
+</body>
+</html>

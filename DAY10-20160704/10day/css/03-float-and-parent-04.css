@@ -1,0 +1,38 @@
+/* 방법3. 부모 요소에게 float 부여
+  - 부모요소에 overflow: hidden | auto; 값을 설정하면 자식 요소만큼 높이가 생긴다
+  - 권장하지 않음
+*/
+
+.parent {
+  width: 720px;
+  border: 1px solid #eceded;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  background: #efefef;
+}
+
+.child {
+  float: left;
+  width: 8.75rem;
+  height: 6.25rem;
+  text-align: center;
+  line-height: 6.25rem;
+  color: #fff;
+}
+
+.child:first-child {
+ background: #3c1423; 
+}
+.child:nth-child(2) {
+  background: #1c4e36;
+}
+.child:nth-child(3) {
+  background: #15143d;
+}
+
+.float-container {
+  overflow: hidden;  /* 적용 됨 */
+  overflow: auto;  /* 적용 됨 */
+  /*overflow: visible;*/ /* 적용안됨 */
+}

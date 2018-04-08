@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>자바스크립트 코어</title>
+  <style>
+    .page-header {
+      font-size: 32px;
+    }
+    .page-header::after {
+      content: '';
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="btn-group" role="group">
+  <button
+    type="button"
+    class="btn-increase-text"
+    aria-label="텍스트 크게">+</button>
+  <button
+    type="button"
+    class="btn-decrease-text"
+    aria-label="텍스트 작게">-</button>
+</div>
+
+<header class="page-header">
+  <h1 class="brand">Brand Identity</h1>
+  <p class="brand-desc">consectetur
+  adipisicing elit. Blanditiis qui,
+  aspernatur in!</p>
+</header>
+
+<script src="resources/DOMHelper/dom-helper.js"></script>
+<script>
+var buttons = queryAll('button');
+var page_header = query('.page-header');
+// var inc = buttons.item(0);
+// var dec = buttons.item(1);
+// console.log(inc, dec);
+var button;
+var l=buttons.length;
+for( var i=0; i<l; i++ ) {
+  button = buttons.item(i);
+  button.onclick = function() {
+    if(this.firstChild.nodeValue === '+') {
+      // console.log('증가 버튼');
+      var current_font_size = getStyle(page_header, 'font-size');
+      page_header.style.fontSize = parseInt(current_font_size, 10) + 10 + 'px';
+    } else {
+      // console.log('감소 버튼');
+      var current_font_size = getStyle(page_header, 'font-size');
+      page_header.style.fontSize = parseInt(current_font_size, 10) - 10 + 'px';
+    }
+  };
+}
+</script>
+</body>
+</html>

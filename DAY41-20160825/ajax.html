@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>비동기통신을 위한 ajax</title> 
+  <style>
+  	body {
+  		margin: 6rem;
+  	}
+	.ajax-result {
+		margin-top: 3rem;
+		border: 3px solid currentColor;
+		padding: 1rem;
+		color: #CA39BA;
+	}
+	.call-ajax-data {
+		cursor: pointer;
+		padding: 0.75rem 1rem;
+		border-radius: 0.25rem;
+		border: none;
+		background: #7F7F7F;
+		color: #fff;
+		font-size: 0.875rem;
+		font-weight: 200;
+	}
+	.call-ajax-data:hover {
+		background: #CA39BA;
+	}
+  </style>
+</head>
+<body>
+	<button type="button" class="call-ajax-data">View Updata</button>
+
+	<div class="ajax-result">
+		 Stand Ready...
+	</div>
+
+<script src="js/ajax-communication.js"></script>
+</body>
+</html>

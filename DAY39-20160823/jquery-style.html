@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>jquery style</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .demo-box {
+      width: 400px;
+      height: 60px;
+      box-sizing: border-box;
+      margin: 1rem 0;
+      border: 5px solid #999;
+      padding: 1em;
+      text-align: center;
+      transition: all .3s ease;
+    }
+    .demo-box.look {
+      border-width: 10px;
+      border-color: #5225e2;
+      padding: 0.75em 0 0 0;
+    }
+  </style>
+  <script src="resources/jquery/jquery-3.1.0.min.js"></script>
+  <script src="js/jquery-style.js"></script>
+</head>
+<body>
+  <div role="group" class="button-controls">
+    <button type="button" class="addClass_look">add <strong>look</strong></button>
+    <button type="button" class="removeClass_look">remove <strong>look</strong></button>
+    <button type="button" class="toggleClass_look">toggle <strong>look</strong></button>
+  </div>
+  <div class="demo-box">demo box</div>
+
+
+</body>
+</html>

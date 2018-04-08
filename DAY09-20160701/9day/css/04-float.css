@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+html {
+	font-size: 100%;
+}
+
+body {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1rem; 
+	line-height: 1.5;	
+}
+
+/* 
+	display: none, block, inline, inline-black;
+	overflow: visible, hidden, auto, scroll;
+	overflow-y: scroll; 구형브라우저 
+
+
+ */
+
+.parent-box {
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 20%;
+	height: 80px;
+	border: 3px solid #aea28f;
+}
+
+.ov {
+	overflow: visible;
+}
+
+.ovh {
+	overflow: hidden;
+}
+
+.ovs {
+	overflow: scroll;
+}
+
+.ova {
+	overflow: auto;
+}
+
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right;
+}
+
+.float[attr^="align-"] {
+	width: 200px;
+	height: 200px;
+}

@@ -1,0 +1,38 @@
+[
+	{
+		"name"        : "DOM",
+		"description" : "문서객체모델",
+		"picture"	  : {
+			"width" : 200,
+			"height" : 200,
+			"src"    : "http://placehold.it/220x220/3a0099/fff/?text=DOM"
+		}
+	},
+	{
+		"name"        : "Javascript",
+		"description" : "자바스크립트",
+		"picture"	  : {
+			"width" : 200,
+			"height" : 200,
+			"src"    : "http://placehold.it/220x220/3a0099/fff/?text=Javascript"
+		}
+	},
+	{
+		"name"        : "Node.js",
+		"description" : "서버사이드 자바스크립트 환경",
+		"picture"	  : {
+			"width" : 200,
+			"height" : 200,
+			"src"    : "http://placehold.it/220x220/3a0099/fff/?text=Node"
+		}
+	},
+	{
+		"name"        : "AngularJS",
+		"description" : "자바스크립트 SPA 프레임워크",
+		"picture"	  : {
+			"width"  : 200,
+			"height" : 200,
+			"src"    : "http://placehold.it/220x220/3a0099/fff/?text=AngularJS"
+		}
+	}
+]

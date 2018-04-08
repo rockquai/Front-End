@@ -1,0 +1,141 @@
+@import var
+@import mixins
+
+// 본문 설계 
+body
+	// ex1. mixin
+	// +font
+
+	// ${} interpolation 방식
+	// font: #{$base-font-size}/#{$base-line-height} $spoq-font-family
+	font: #{$base-font-size}/#{$base-line-height} $lato-font-family
+	
+	// 변수 선언 방식
+	// font-size: $base-font-size
+	// font-family: $spoq-font-family
+	// line-height: $base-line-height
+
+
+//
+ * --------------------------------
+ * @debug 디렉티브(지시자)를 사용하면 명령 창에 디버그 결과를 출력한다.
+ * --------------------------------
+@debug 1 < 4
+@debug 1 == 4
+@debug red !=#ff0 
+@debug type-of(red) //color
+
+//
+ * --------------------------------
+ * 보간법(Interpolation) #{}
+ * --------------------------------
+$selector: name
+$pseudo-name: after
+
+#area .#{$selector}
+	margin
+		left: auto
+		right: auto
+	&::#{$pseudo-name}
+		content: 'pseudo interpolation'
+
+//
+ * --------------------------------
+ * 보간법 + RWD, 쿼리문 보간법 활용(#{ })
+ * --------------------------------
+
+$media-md: "screen and (min-width: 760px)"
+$media-lg: "screen and (min-width: 1220px)"
+$media-print: "not screen and (min-width: 21cm)"
+
+// ex1.
+// @media #{$media-md}
+// 	.#{$selector}
+// 		display: flex
+// 		flex-flow: row-reverse wrap
+// 		@media #{$media-lg}
+// 			display: block
+// 			padding: 1em
+
+// ex2.
+
+$selector: name
+$media-print: "not screen and (min-width: 21cm)"
+
+.#{$selector}
+	@media #{$media-print}
+		background: #fff !important
+		color: #000 !important
+
+
+//ex1. 
+// %border-radious
+// 	-webkit-box-sizing: 4px
+// 	-moz-box-sizing: 4px
+// 	box-sizing: 4px
+
+// //mixin
+// header
+// 	@extend %border-radous
+// 	+box-sizing
+
+// main
+// 	@extend %border-radous
+// 	+box-sizing
+
+// footer
+// 	@extend %border-radous
+// 	+box-sizing
+
+//ex2. 매개변수를 넣은 믹스인 
+%border-radius
+	-webkit-box-sizing: 4px
+	-moz-box-sizing: 4px
+	box-sizing: 4px
+
+//mixin
+header
+	@extend %border-radius
+	+box-sizing(border-box)
+
+main
+	@extend %border-radius
+	+size(10px 30px)
+	+box-sizing(content-box)
+
+footer
+	@extend %border-radius
+	+size($height: 90%)
+	+box-sizing(border-box)
+
+nav
+	ul
+	+size-same(80%)
+
+.box-triangle
+	+triangle-left(50px, 100px, 50px, #ff0)
+
+
+=demo
+	background: red
+	margin: 10px
+
+aside
+	+demo
+
+
+
+=apply-to-ie6-only
+  * html
+    @content;
+
++apply-to-ie6-only
+  #logo
+    background-image: url(/logo.gif)
+
+
+
+
+
+
+

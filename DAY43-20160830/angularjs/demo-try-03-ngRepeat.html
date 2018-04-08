@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>ngRepeat 디렉티브 - AngularJS</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body data-ng-init="
+categories=[
+	{
+		'name'        : 'DOM',
+		'description' : '문서객체모델',
+		'picture'	  : {
+			'width' : 200,
+			'height' : 200,
+			'src'    : 'http://placehold.it/220x220/3a0099/fff/?text=DOM'
+		}
+	},
+	{
+		'name'        : 'Javascript',
+		'description' : '자바스크립트',
+		'picture'	  : {
+			'width' : 200,
+			'height' : 200,
+			'src'    : 'http://placehold.it/220x220/3a0099/fff/?text=Javascript'
+		}
+	},
+	{
+		'name'        : 'Node.js',
+		'description' : '서버사이드 자바스크립트 환경',
+		'picture'	  : {
+			'width' : 200,
+			'height' : 200,
+			'src'    : 'http://placehold.it/220x220/3a0099/fff/?text=Node'
+		}
+	},
+	{
+		'name'        : 'AngularJS',
+		'description' : '자바스크립트 SPA 프레임워크',
+		'picture'	  : {
+			'width'  : 200,
+			'height' : 200,
+			'src'    : 'http://placehold.it/220x220/3a0099/fff/?text=AngularJS'
+		}
+	}
+];
+">
+
+	<!--
+		Directives & Expressions
+			⊙ ng-cloak [FOUC(Flash Of Unstyled Content)](https://en.wikipedia.org/wiki/Flash_of_unstyled_content) : 서버요청이 느려질 때 '{{}}' 보이지 않게 넣는다. 
+			⊙ ng-switch
+			⊙ ng-class
+			⊙ ng-show
+	-->
+<h1>Angular를 사용한 데이터 반복 처리</h1>
+<ol class="people-list">
+	<!-- 시작:  frontend.length 개수만큼 반복하여 <li> 템플릿 완성 -->
+	<!-- 'frontend in categories' for in와 동일한 하다. -->
+	<!-- data-ng-repeat: 반복되는 곳에 넣어주면 된다, -->
+	<li data-ng-repeat="frontend in categories">
+		<div data-ng-bind="frontend.name"></div>
+		<div data-ng-bind="frontend.description"></div>	
+		<!-- 
+			* ngSrc
+			- src="{{frontend.picture.src}}" 
+			ㄴ> 데이터가 불려올 때 src 경로가 없어서(파일이 없어) net::ERR_FILE_NOT_FOUND 에러가 난다 
+			ㄴ> data-ng-src를 붙여줘서 게으른 로딩(Lazy Loading)을 사용한다. 
+		 -->
+		<div>
+			<img 
+				data-ng-src="{{frontend.picture.src}}" 
+				alt="{{frontend.name}}"
+				width="{{frontend.picture.width}}"
+				height="{{frontend.picture.height}}"
+			>
+		</div>
+	</li>
+	<!-- 종료: frontend.length 개수만큼 반복하여 <li> 템플릿 완성 -->
+</ol>
+</body>
+</html>

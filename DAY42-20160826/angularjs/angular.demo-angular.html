@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko-KR" data-ng-app> 
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- bower로 받은 파일 -->
+  <script src="lib/angular/angular.min.js"></script>
+</head>
+<body>
+	<div data-ng-controller="divController"></div>
+  <script>
+  	angular.controller('divController', ['$scope', '$http', function($scope, $http){
+  		$http // 가서 서버에서 모델 가지고 와
+  		$scope // 가사 템플릿에 뷰 업데이트 하고 와
+  	}]);
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+p{
+	/* 가운데 정렬 */
+	text-align: center;
+}
+
+.ie7 body{background: pink;}
+	body{background:red;}

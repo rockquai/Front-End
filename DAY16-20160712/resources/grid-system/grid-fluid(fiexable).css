@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 2rem;
+}
+
+[class*="side"] {
+	float: left;
+	width: 25%;
+	padding: 1rem; 
+	/* padding을 주면 색이 들어간다. background-clip 부여 */
+	/* 'background-color' 먼저 선언하고 background-clip를 아래에 선언해야 된다. 순서를 바꾸면  'background-clip' 적용이 안된다.*/
+	/* background-clip : 색, background-origin: 이미지 위치 */
+	/* bgc(color), bog(image) : content-box, padding-box, border-box  */
+	background-color: #ff0;
+	background-clip: content-box;
+	background-origin: content-box;
+}

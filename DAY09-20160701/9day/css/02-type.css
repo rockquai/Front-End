@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+html {
+	font-size: 100%;
+}
+
+body {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	/*font-size: 0.875rem;*/ /* 14px */
+	font-size: 1rem; /* 12.8px */
+	/* 행간 설정 */
+	line-height: 1.5rem; /* 19.2px */ /* 1rem * 1.5 = 16 * 1.5 = 24px */
+	background: url("../images/guide/leading-24px.png");
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+img {
+	vertical-align: middle;
+}
+
+img + p {
+	margin-top: 1.5rem;
+}
+
+.small-caps {
+	font-variant: small-caps;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+/* IR 테크닉 (이미지 대체 기법) */
+.brand-github {
+	overflow: hidden;
+	/*display: block;*/
+	width: 80px;
+	height: 35px;
+	background-image: url("../images/github.png");
+	background-repeat: no-repeat;
+	text-indent: -9999em;
+}
+
+.brand-github a {
+	display: block;
+}

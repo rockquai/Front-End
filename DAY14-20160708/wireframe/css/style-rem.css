@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+body {
+	font: 0.875rem/1.5 "Spoqa Han Sans", sans-serif;
+}
+
+h1, h2, h3 {
+	font-size: 0.875rem;
+	color: #fff;
+}
+
+.container {
+	min-width: 65.5rem;
+}
+
+.brandname-header {
+	margin-bottom: 1.5rem;
+}
+
+.gnb {
+	padding-top: 1.5rem;
+}
+
+.gnb .logo {
+	height: 96px;
+	margin-left: 7.375rem;
+	background: #242424;
+}
+
+.gnb-right-login {
+	margin-left: 2.5rem;
+}
+
+.gnb-right-login li {
+	float: right;
+	margin-right: 1.25rem;
+}
+
+.gnb-right-login li a {
+	width: 6.75rem;
+	height: 2.125rem;
+}
+
+.gnb-right-login li a,
+.gnb-right-menu li a {
+	display: block;
+	background: #242424;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+.gnb-right .gnb-right-menu {
+	margin-top: 0.875rem;
+	margin-left: 1.75rem;
+}
+
+.gnb-right-menu li {
+	float: left;
+	margin-left: 1.25rem;
+}
+
+.gnb-right-menu li a {
+	width: 8rem;
+	height: 3rem;
+}
+
+/* [1] 메인 쇼케이스 */
+.carousel-main {
+	/*position: relative;*/
+}
+
+.carousel-showcase {
+	height: 456px;
+	background-color: #242424;
+}
+
+.carousel-showcase span {
+	color: #fff;
+}
+
+.carousel-main .carousel-thumb {
+	margin-left: 18.75rem;
+    margin-top: -10.5rem;
+}
+
+/*.carousel-main .carousel-thumb {
+	position: absolute;
+	width: 640px;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}*/
+
+.carousel-main .carousel-thumb li {
+	float: left;
+	margin-right: 1.25rem;
+}
+
+.carousel-main .carousel-thumb li a { 
+	display: block;
+	width: 8.75rem;
+	height: 4.5rem;
+	background: #4c4c4c;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+/*  [2] 주요콘텐츠 캐로셀1 / [4] 주요콘텐츠 캐로셀2 - 공 */
+.brandname-main .carousel-submain {
+	width: 64rem;
+	height: 24rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -4.5rem;
+	margin-bottom: 1.5rem;
+	background: #d7d7d7;
+	z-index: 10;
+}
+
+.carousel-submain .carousel-submain-showcase {
+	padding-top: 3rem;
+}
+
+.carousel-submain-showcase li {
+	float: left;
+	margin-left: 1.25rem;
+}
+
+.carousel-submain-showcase li:first-child {
+	margin-left: 0.625rem;
+}
+
+.carousel-submain-showcase li a {
+	display: block;
+	width: 14.75rem;
+	height: 18rem;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	background: #4c4c4c;
+}
+
+/* [3] youtube */
+.carousel-submain-youtube {
+/*	position: relative;*/
+	height: 21rem;
+	background: #7b7b7b;
+	margin-bottom: 1.5rem;
+}
+
+/*  youtube 버튼 가운데 정렬시 absolute 사용하면 
+	(겹치게 하는 디자인을 할 경우) 아래 형제 요소가 그 위로 올라오지 못한다.*/
+/*.buttonset-contorl {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}*/
+
+.buttonset-contorl {
+	padding-left: 37.75rem;
+	padding-top: 8.0625rem;
+}
+
+.buttonset-contorl .button-play {
+	cursor: pointer;
+	width: 6.9375rem;
+	height: 78px;
+	border-radius: 1.25rem;
+	background: #cb1e20;
+}
+
+.buttonset-contorl .button-play:before{ 
+    display: block;
+    content: '';
+    border-left: 1.875rem solid #fff;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    margin-left: 2.75rem;
+ }
+
+
+/*  [5] 배너 */
+.banner {
+	height: 9rem;
+	background: #ff7d7d;
+	margin-bottom: 1.5rem;
+	color: #fff
+}
+
+/*  [6] 풋터 */
+.brandname-footer {
+	height: 10.5rem;
+	background: #242424;
+	color: #fff;
+}
+
+.company-info {
+	margin-left: 6.75rem;
+	padding-top: 3rem;
+}
+
+.company-info .company-map, .company-info .company-sns {
+	height: 4rem;
+	background: #4c4c4c;
+}
+
+
+
+
+

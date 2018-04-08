@@ -1,0 +1,110 @@
+//common
+
+// 목록 초기화
+%reset-list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+
+// 이미지 하단에 공백을 형성하여 옆으로 배치되는 글들이 동일한 공간을 가질 수 있도록 설정
+%blank-bottom-img {
+  overflow: hidden;
+}
+
+// * media
+// : 배경 이미지(CSS)에 적용되는 Fluid BG Image
+// : 스크린 비율(가로x세로)
+// 	ㄴ 4:3  = 75% (3/4*100%)
+// 	ㄴ 16:9 = 56.25% (9/16*100%)
+// 	ㄴ 21:9 = 42.857142857% (9/12*100%)
+
+%rwd-media {
+  width: 100%;
+  height: auto;
+}
+
+%rwd-media-ratio {
+	width: 100%;
+	height: 0;
+	background-size: cover;
+	background-position: center center;
+}
+
+%rwd-img-4-3 {
+	@extend %rwd-media-ratio;
+	padding-bottom: percent(3, 4);
+}
+
+%rwd-img-16-9 {
+	@extend %rwd-media-ratio;
+	padding-bottom: percent(9, 6);
+}
+
+%rwd-img-21-9 {
+	@extend %rwd-media-ratio;
+	padding-bottom: percent(9, 21);
+}
+
+// 클리어 픽스 
+%clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+%lt-ie8 {
+	@extend %clearfix;
+	zoom: 1;
+}
+
+//스크린리더기 읽을 수 있는 화면 감춤
+%a11y-hidden {
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0); 
+	clip: rect(0,0,0,0);
+	width:    1px;
+	height:   1px;
+	margin:   -1px;
+	border:   0;
+	padding:  0;
+}
+%a11y-hidden.focusable:focus {
+	overflow: visible;
+	position: static;
+	clip:     auto;
+	width:    auto;
+	height:   auto;
+	margin:   0;
+}
+
+.a11y-hidden {
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0); 
+	clip: rect(0,0,0,0);
+	width:    1px;
+	height:   1px;
+	margin:   -1px;
+	border:   0;
+	padding:  0;
+}
+.a11y-hidden.focusable:focus {
+	overflow: visible;
+	position: static;
+	clip:     auto;
+	width:    auto;
+	height:   auto;
+	margin:   0;
+}
+
+
+.ir {
+	display: block;
+	overflow: hidden;
+	text-indent: -9999em;
+	background: url("../images/ir.png") no-repeat
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title> javascript  - DOM </title>
+  <style>
+  	#button-group {
+  		position: fixed;
+  		display: flex;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  	}
+	
+	#button-group button {
+		flex: 1;
+		border: none;
+		background: #000;
+		padding: 1em;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	
+	#button-group button:nth-child(1) { background: #f50054;}
+	#button-group button:nth-child(2) { background: #790025;}
+	#button-group button:nth-child(3) { background: #20FA2A;}
+	#button-group button:nth-child(4) { background: #0000F2;}
+	#button-group button:nth-child(5) { background: #33D904;}
+	#button-group button:nth-child(6) { background: #6FBCD7;}
+
+  </style>
+</head>
+<body>
+
+//html
+	<div id="button-group" role="group">
+		<button type="button">#f50054</button>
+		<button type="button">#790025</button>
+		<button type="button">#20FA2A</button>
+		<button type="button">#0000F2</button>
+		<button type="button">#33D904</button>
+		<button type="button">#6FBCD7</button>
+	</div>
+
+
+<script>
+	// //ex1. 
+	// var btn_group = document.getElementById('button-group');
+	// var buttons = btn_group.getElementsByTagName('button');
+	// var btn1 = buttons[0];
+	// var btn2 = buttons[1];
+	// var btn3 = buttons[2];
+	// var btn4 = buttons[3];
+	// var btn5 = buttons[4];
+	// var btn6 = buttons[5];
+	// var body = document.body;
+
+	// btn1.onclick = function() {
+	// 	var color = btn1.firstChild.nodeValue;
+	// 	body.style.backgroundColor = color;
+	// };
+	// // btn1 ~ btn6까지 반복되는 코드 ... 비효율성
+
+
+	// //ex2. btn1.onclick = var color = btn1.firstChild.nodeValue; ==> btn1 같다. this 사용
+	// var btn_group = document.getElementById('button-group');
+	// var buttons = btn_group.getElementsByTagName('button');
+	// var btn1 = buttons[0];
+	// var btn2 = buttons[1];
+	// var btn3 = buttons[2];
+	// var btn4 = buttons[3];
+	// var btn5 = buttons[4];
+	// var btn6 = buttons[5];
+	// var body = document.body;
+
+	// btn1.onclick = function() {
+	// 	var color = this.firstChild.nodeValue;
+	// 	body.style.backgroundColor = color;
+	// };
+	// // btn1 ~ btn6까지 반복되는 코드 ... 비효율성
+
+	// ex3. color 함수 빼기
+	var btn_group = document.getElementById('button-group');
+	var buttons = btn_group.getElementsByTagName('button');
+	var btn1 = buttons[0];
+	var btn2 = buttons[1];
+	var btn3 = buttons[2];
+	var btn4 = buttons[3];
+	var btn5 = buttons[4];
+	var btn6 = buttons[5];
+	var body = document.body; //body
+
+	var changBgcolor = function() {
+		var color = this.firstChild.nodeValue;
+		console.log(color);
+		body.style.backgroundColor = color;
+	}
+
+	btn1.onmouseenter = 
+	btn2.onmouseenter = 
+	btn3.onmouseenter = 
+	btn4.onmouseenter = 
+	btn5.onmouseenter = 
+	btn6.onmouseenter = changBgcolor;
+
+	// 문서_대상.이벤트 = 할일(함수);
+	// [이벤트] onclick, onmouseenter
+	// firstChild : 텍스트 노드 
+	// firstChild.nodeValue : 텍스트 노드의 값
+	// firstChild.nodeValue = textContent = innerHTML
+	// ㄴ> textContent 표준이지만 크로스 브라우징 이슈가 있어 안 쓴다.
+	// ㄴ> innerHTML: 비표준
+
+	// 익명함수: 이름이 없는 함수 
+	// return이 없는 함수는 'undefined' 반환한다. 
+	// ㄴ> 만약 btn1.onmouseenter = changBgcolor();하게 되면 undefined 나온다.
+	// context : 함수를 실행시킨 주체. (= 실행 주체)
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
